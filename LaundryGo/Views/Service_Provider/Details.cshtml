@@ -1,0 +1,125 @@
+﻿@model LaundryGo.Models.Service_Provider
+
+@{
+	ViewData["Title"] = "Details";
+}
+
+<div class="row">
+	<div class="col-lg-12">
+		<h1 class="page-header">Service Provider</h1>
+	</div>
+	<!-- /.col-lg-12 -->
+</div>
+<div class="row">
+	<div class="col-lg-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Details
+			</div>
+			<div class="panel-body">
+
+				<div class="row">
+					<h2>Details</h2>
+
+					<div>
+						<h4>Service_Provider</h4>
+						<hr />
+						<dl class="dl-horizontal">
+							<dt>
+								@Html.DisplayNameFor(model => model.sp_name)
+							</dt>
+							<dd>
+								@Html.DisplayFor(model => model.sp_name)
+							</dd>
+							<dt>
+								@Html.DisplayNameFor(model => model.sp_add_details)
+							</dt>
+							<dd>
+								@Html.DisplayFor(model => model.sp_add_details)
+							</dd>
+							<dt>
+								@Html.DisplayNameFor(model => model.sp_registration_no)
+							</dt>
+							<dd>
+								@Html.DisplayFor(model => model.sp_registration_no)
+							</dd>
+							<dt>
+								@Html.DisplayNameFor(model => model.sp_fb)
+							</dt>
+							<dd>
+								@Html.DisplayFor(model => model.sp_fb)
+							</dd>
+							<dt>
+								@Html.DisplayNameFor(model => model.sp_google)
+							</dt>
+							<dd>
+								@Html.DisplayFor(model => model.sp_google)
+							</dd>
+							<dt>
+								@Html.DisplayNameFor(model => model.sp_phone)
+							</dt>
+							<dd>
+								@Html.DisplayFor(model => model.sp_phone)
+							</dd>
+							<dt>
+								@Html.DisplayNameFor(model => model.sp_mobile)
+							</dt>
+							<dd>
+								@Html.DisplayFor(model => model.sp_mobile)
+							</dd>
+							<dt>
+								@Html.DisplayNameFor(model => model.sp_password)
+							</dt>
+							<dd>
+								@Html.DisplayFor(model => model.sp_password)
+							</dd>
+							<dt>
+								@Html.DisplayNameFor(model => model.sp_status)
+							</dt>
+							<dd>
+								<select asp-for="sp_status" asp-items="Html.GetEnumSelectList<OrderStatusType>()" class="form-control" disabled></select>
+
+							</dd>
+							<dt>
+								@Html.DisplayNameFor(model => model.sp_add_1)
+							</dt>
+							<dd>
+								@Html.DisplayFor(model => model.sp_add_1)
+							</dd>
+							<dt>
+								@Html.DisplayNameFor(model => model.sp_add_2)
+							</dt>
+							<dd>
+								@Html.DisplayFor(model => model.sp_add_2)
+							</dd>
+							<dt>
+								@Html.DisplayNameFor(model => model.sp_add_3)
+							</dt>
+							<dd>
+								@Html.DisplayFor(model => model.sp_add_3)
+							</dd>
+							<dt>
+								@Html.DisplayNameFor(model => model.sp_post)
+							</dt>
+							<dd>
+								@Html.DisplayFor(model => model.sp_post)
+							</dd>
+							<dt>
+								@Html.DisplayNameFor(model => model.created_date)
+							</dt>
+							<dd>
+								@Html.DisplayFor(model => model.created_date)
+							</dd>
+							<dt>
+								@Html.DisplayNameFor(model => model.update_date)
+							</dt>
+							<dd>
+								@Html.DisplayFor(model => model.update_date)
+							</dd>
+						</dl>
+					</div>
+					<div>
+						<a asp-action="Edit" asp-route-id="@Model.sp_id">Edit</a> |
+						<a asp-action="Index">Back to List</a>
+					</div>
+					</div></div></div></div></div>

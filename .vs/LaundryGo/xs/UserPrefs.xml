@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{D6737AB3-C160-478E-AF63-F2BBA7B98FC5}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LaundryGo/Startup.cs">
+    <Files>
+      <File FileName="LaundryGo/web.config" Line="19" Column="105" />
+      <File FileName="LaundryGo/appsettings.json" Line="9" Column="22" />
+      <File FileName="LaundryGo/Startup.cs" Line="20" Column="9" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.LaundryGo PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.Laundry_220Go_220Customer_220Site PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

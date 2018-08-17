@@ -1,0 +1,113 @@
+﻿@model IEnumerable<LaundryGo.Models.Customer>
+
+@{
+	ViewData["Title"] = "Index";
+}
+
+@section head{
+	<link href="/theme/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+	<!-- DataTables CSS -->
+	<link href="/theme/vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+	<!-- DataTables Responsive CSS -->
+	<link href="/theme/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+	<!-- Custom CSS -->
+	<link href="/theme/dist/css/sb-admin-2.css" rel="stylesheet">
+	<!-- Custom Fonts -->
+	<link href="/theme/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+}
+<div class="row">
+	<div class="col-lg-12">
+		<h1 class="page-header">Customer</h1>
+
+	</div>
+	<!-- /.col-lg-12 -->
+</div>
+<div class="row">
+	<div class="col-lg-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				List of Driver
+			</div>
+			<!-- /.panel-heading -->
+			<div class="panel-body">
+				<p>
+					<a asp-action="Create">Create New</a>
+				</p>
+				<table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+					<thead>
+						<tr>
+							<th>
+								@Html.DisplayNameFor(model => model.cust_name)
+							</th>
+							<th>
+								@Html.DisplayNameFor(model => model.created_date)
+							</th>
+							<th>
+								@Html.DisplayNameFor(model => model.last_login)
+							</th>
+							<th>
+								@Html.DisplayNameFor(model => model.cust_status)
+							</th>
+							<th>
+								@Html.DisplayNameFor(model => model.cust_phone)
+							</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var item in Model)
+						{
+							<tr>
+								<td>
+									@Html.DisplayFor(modelItem => item.cust_name)
+								</td>
+								<td>
+									@Html.DisplayFor(modelItem => item.created_date)
+								</td>
+								<td>
+									@Html.DisplayFor(modelItem => item.last_login)
+								</td>
+								<td>
+									<select value="@Html.DisplayFor(modelItem => item.cust_status)" asp-items="Html.GetEnumSelectList<StatusType>()" class="form-control" disabled></select>
+
+								</td>
+								<td>
+									@Html.DisplayFor(modelItem => item.cust_phone)
+								</td>
+                                <td>
+
+                                    <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.cust_id"><i class="fa fa-eye"></i></a>
+                                    <a class="btn btn-default" asp-action="Edit" asp-route-id="@item.cust_id"><i class="fa fa-edit"></i></a>
+                                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.cust_id"><i class="fa fa-trash"></i></a>
+                                </td>
+							</tr>
+						}
+					</tbody>
+				</table>
+				<!-- /.table-responsive -->
+
+			</div>
+			<!-- /.panel-body -->
+		</div>
+		<!-- /.panel -->
+	</div>
+	<!-- /.col-lg-12 -->
+</div>
+@section foot{
+	<!-- DataTables JavaScript -->
+	<script src="/theme/vendor/datatables/js/jquery.dataTables.min.js"></script>
+	<script src="/theme/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+	<script src="/theme/vendor/datatables-responsive/dataTables.responsive.js"></script>
+	<!-- Custom Theme JavaScript -->
+	<script src="/theme/dist/js/sb-admin-2.js"></script>
+	<!-- Page-Level Demo Scripts - Tables - Use for reference -->
+	<script>
+		$(document).ready(function () {
+			$('#dataTables-example').DataTable({
+				responsive: true
+			});
+		});
+	</script>
+
+}

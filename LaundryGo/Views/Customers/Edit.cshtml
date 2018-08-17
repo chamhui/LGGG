@@ -1,0 +1,77 @@
+﻿@model LaundryGo.Models.Customer
+
+@{
+	ViewData["Title"] = "Edit";
+}
+
+<div class="row">
+	<div class="col-lg-12">
+		<h1 class="page-header">Customer</h1>
+	</div>
+	<!-- /.col-lg-12 -->
+</div>
+<div class="row">
+	<div class="col-lg-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Edit Customer
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-4">
+						<form asp-action="Edit">
+							<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+							<input type="hidden" asp-for="cust_id" />
+							<div class="form-group">
+								<label asp-for="cust_name" class="control-label"></label>
+								<input asp-for="cust_name" class="form-control" />
+								<span asp-validation-for="cust_name" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="cust_fb" class="control-label"></label>
+								<input asp-for="cust_fb" class="form-control" />
+								<span asp-validation-for="cust_fb" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="cust_google" class="control-label"></label>
+								<input asp-for="cust_google" class="form-control" />
+								<span asp-validation-for="cust_google" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="created_date" class="control-label"></label>
+								<input asp-for="created_date" class="form-control" />
+								<span asp-validation-for="created_date" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="last_login" class="control-label"></label>
+								<input asp-for="last_login" class="form-control" />
+								<span asp-validation-for="last_login" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="cust_status" class="control-label"></label>
+								<select asp-for="cust_status" asp-items="Html.GetEnumSelectList<StatusType>()" class="form-control"></select>
+
+								<span asp-validation-for="cust_status" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="cust_phone" class="control-label"></label>
+								<input asp-for="cust_phone" class="form-control" />
+								<span asp-validation-for="cust_phone" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<input type="submit" value="Save" class="btn btn-default" />
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<div>
+					<a asp-action="Index">Back to List</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+@section Scripts {
+	@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

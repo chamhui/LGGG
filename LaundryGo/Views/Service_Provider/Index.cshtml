@@ -1,0 +1,172 @@
+﻿@model IEnumerable<LaundryGo.Models.Service_Provider>
+
+@{
+	ViewData["Title"] = "Index";
+}
+
+@section head{
+	<link href="/theme/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+	<!-- DataTables CSS -->
+	<link href="/theme/vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+	<!-- DataTables Responsive CSS -->
+	<link href="/theme/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+	<!-- Custom CSS -->
+	<link href="/theme/dist/css/sb-admin-2.css" rel="stylesheet">
+	<!-- Custom Fonts -->
+	<link href="/theme/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+}
+<div class="row">
+	<div class="col-lg-12">
+		<h1 class="page-header">Service Provider</h1>
+
+	</div>
+	<!-- /.col-lg-12 -->
+</div>
+<div class="row">
+	<div class="col-lg-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				List of Driver
+			</div>
+			<!-- /.panel-heading -->
+			<div class="panel-body">
+				<p>
+					<a asp-action="Create">Create New</a>
+				</p>
+				<table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+					<thead>
+						<tr>
+							<th>
+								@Html.DisplayNameFor(model => model.sp_name)
+							</th>
+							<th>
+								@Html.DisplayNameFor(model => model.sp_add_details)
+							</th>
+							<th>
+								@Html.DisplayNameFor(model => model.sp_registration_no)
+							</th>
+							<th>
+								@Html.DisplayNameFor(model => model.sp_fb)
+							</th>
+							<th>
+								@Html.DisplayNameFor(model => model.sp_google)
+							</th>
+							<th>
+								@Html.DisplayNameFor(model => model.sp_phone)
+							</th>
+							<th>
+								@Html.DisplayNameFor(model => model.sp_mobile)
+							</th>
+							<th>
+								@Html.DisplayNameFor(model => model.sp_password)
+							</th>
+							<th>
+								@Html.DisplayNameFor(model => model.sp_status)
+							</th>
+							<th>
+								@Html.DisplayNameFor(model => model.sp_add_1)
+							</th>
+							<th>
+								@Html.DisplayNameFor(model => model.sp_add_2)
+							</th>
+							<th>
+								@Html.DisplayNameFor(model => model.sp_add_3)
+							</th>
+							<th>
+								@Html.DisplayNameFor(model => model.sp_post)
+							</th>
+							<th>
+								@Html.DisplayNameFor(model => model.created_date)
+							</th>
+							<th>
+								@Html.DisplayNameFor(model => model.update_date)
+							</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var item in Model)
+						{
+							<tr>
+								<td>
+									@Html.DisplayFor(modelItem => item.sp_name)
+								</td>
+								<td>
+									@Html.DisplayFor(modelItem => item.sp_add_details)
+								</td>
+								<td>
+									@Html.DisplayFor(modelItem => item.sp_registration_no)
+								</td>
+								<td>
+									@Html.DisplayFor(modelItem => item.sp_fb)
+								</td>
+								<td>
+									@Html.DisplayFor(modelItem => item.sp_google)
+								</td>
+								<td>
+									@Html.DisplayFor(modelItem => item.sp_phone)
+								</td>
+								<td>
+									@Html.DisplayFor(modelItem => item.sp_mobile)
+								</td>
+								<td>
+									@Html.DisplayFor(modelItem => item.sp_password)
+								</td>
+								<td>
+									<select value="@Html.DisplayFor(modelItem => item.sp_status)" asp-items="Html.GetEnumSelectList<StatusType>()" class="form-control" disabled></select>
+
+								</td>
+								<td>
+									@Html.DisplayFor(modelItem => item.sp_add_1)
+								</td>
+								<td>
+									@Html.DisplayFor(modelItem => item.sp_add_2)
+								</td>
+								<td>
+									@Html.DisplayFor(modelItem => item.sp_add_3)
+								</td>
+								<td>
+									@Html.DisplayFor(modelItem => item.sp_post)
+								</td>
+								<td>
+									@Html.DisplayFor(modelItem => item.created_date)
+								</td>
+								<td>
+									@Html.DisplayFor(modelItem => item.update_date)
+								</td>
+								<td>
+									<a asp-action="Edit" asp-route-id="@item.sp_id">Edit</a> |
+									<a asp-action="Details" asp-route-id="@item.sp_id">Details</a> |
+									<a asp-action="Delete" asp-route-id="@item.sp_id">Delete</a>
+								</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+				<!-- /.table-responsive -->
+
+			</div>
+			<!-- /.panel-body -->
+		</div>
+		<!-- /.panel -->
+	</div>
+	<!-- /.col-lg-12 -->
+</div>
+@section foot{
+	<!-- DataTables JavaScript -->
+	<script src="/theme/vendor/datatables/js/jquery.dataTables.min.js"></script>
+	<script src="/theme/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+	<script src="/theme/vendor/datatables-responsive/dataTables.responsive.js"></script>
+	<!-- Custom Theme JavaScript -->
+	<script src="/theme/dist/js/sb-admin-2.js"></script>
+	<!-- Page-Level Demo Scripts - Tables - Use for reference -->
+	<script>
+		$(document).ready(function () {
+			$('#dataTables-example').DataTable({
+				responsive: true
+			});
+		});
+	</script>
+
+}

@@ -1,0 +1,74 @@
+﻿@model Tuple<LaundryGo.Models.Customer,LaundryGo.Models.Cust_Address>
+
+@{
+	ViewData["Title"] = "Details";
+}
+<div class="row">
+	<div class="col-lg-12">
+		<h1 class="page-header">Customer</h1>
+	</div>
+	<!-- /.col-lg-12 -->
+</div>
+<div class="row">
+	<div class="col-lg-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Details
+			</div>
+			<div class="panel-body">
+				<div class="row">
+                    <div class="col-lg-12">
+					<h4>Customer</h4>
+					<hr />
+					<dl class="dl-horizontal">
+						<dt>
+							@Html.DisplayNameFor(model => model.Item1.cust_name)
+						</dt>
+						<dd>
+							@Html.DisplayFor(model => model.Item1.cust_name)
+						</dd>
+						<dt>
+							@Html.DisplayNameFor(model => model.Item1.cust_fb)
+						</dt>
+						<dd>
+							@Html.DisplayFor(model => model.Item1.cust_fb)
+						</dd>
+						<dt>
+							@Html.DisplayNameFor(model => model.Item1.cust_google)
+						</dt>
+						<dd>
+							@Html.DisplayFor(model => model.Item1.cust_google)
+						</dd>
+						<dt>
+							@Html.DisplayNameFor(model => model.Item1.created_date)
+						</dt>
+						<dd>
+							@Html.DisplayFor(model => model.Item1.created_date)
+						</dd>
+						<dt>
+							@Html.DisplayNameFor(model => model.Item1.last_login)
+						</dt>
+						<dd>
+							@Html.DisplayFor(model => model.Item1.last_login)
+						</dd>
+						<dt>
+							@Html.DisplayNameFor(model => model.Item1.cust_status)
+						</dt>
+						<dd>
+							<select asp-for="Item1.cust_status" asp-items="Html.GetEnumSelectList<StatusType>()" class="form-control" disabled></select>
+
+						</dd>
+						<dt>
+							@Html.DisplayNameFor(model => model.Item1.cust_phone)
+						</dt>
+						<dd>
+							@Html.DisplayFor(model => model.Item1.cust_phone)
+						</dd>
+					</dl>
+                  </div>
+				</div>
+				<div>
+					<a asp-action="Edit" asp-route-id="@Model.Item1.cust_id">Edit</a> |
+					<a asp-action="Index">Back to List</a>
+				</div>
+				</div></div></div></div>

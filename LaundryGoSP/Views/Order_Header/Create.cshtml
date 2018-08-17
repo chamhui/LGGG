@@ -1,0 +1,123 @@
+﻿@model LaundryGoSP.Models.Order_Header
+
+@{
+	ViewData["Title"] = "Create";
+}
+
+<div class="row">
+	<div class="col-lg-12">
+		<h1 class="page-header">Order</h1>
+	</div>
+	<!-- /.col-lg-12 -->
+</div>
+<div class="row">
+	<div class="col-lg-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Create Order
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-4">
+						<form asp-action="Create">
+							<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+							<div class="form-group">
+								<label asp-for="cust_id" class="control-label"></label>
+								<input asp-for="cust_id" class="form-control" />
+								<span asp-validation-for="cust_id" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="pickup_dri_id" class="control-label"></label>
+								<input asp-for="pickup_dri_id" class="form-control" />
+								<span asp-validation-for="pickup_dri_id" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="sp_id" class="control-label"></label>
+								<input asp-for="sp_id" class="form-control" />
+								<span asp-validation-for="sp_id" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="status_id" class="control-label"></label>
+								<select asp-for="status_id" asp-items="Html.GetEnumSelectList<StatusType>()" class="form-control"></select>
+
+								<span asp-validation-for="status_id" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="order_weight" class="control-label"></label>
+								<input asp-for="order_weight" class="form-control" />
+								<span asp-validation-for="order_weight" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="order_pickup_add" class="control-label"></label>
+								<input asp-for="order_pickup_add" class="form-control" />
+								<span asp-validation-for="order_pickup_add" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="order_deliver_add" class="control-label"></label>
+								<input asp-for="order_deliver_add" class="form-control" />
+								<span asp-validation-for="order_deliver_add" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="deliver_dri_id" class="control-label"></label>
+								<input asp-for="deliver_dri_id" class="form-control" />
+								<span asp-validation-for="deliver_dri_id" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="request_time" class="control-label"></label>
+								<input asp-for="request_time" class="form-control" />
+								<span asp-validation-for="request_time" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="awaiting_pickup_time" class="control-label"></label>
+								<input asp-for="awaiting_pickup_time" class="form-control" />
+								<span asp-validation-for="awaiting_pickup_time" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="pickup_time" class="control-label"></label>
+								<input asp-for="pickup_time" class="form-control" />
+								<span asp-validation-for="pickup_time" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="washing_time" class="control-label"></label>
+								<input asp-for="washing_time" class="form-control" />
+								<span asp-validation-for="washing_time" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="washing_completed_time" class="control-label"></label>
+								<input asp-for="washing_completed_time" class="form-control" />
+								<span asp-validation-for="washing_completed_time" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="delivering_time" class="control-label"></label>
+								<input asp-for="delivering_time" class="form-control" />
+								<span asp-validation-for="delivering_time" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="delivered_time" class="control-label"></label>
+								<input asp-for="delivered_time" class="form-control" />
+								<span asp-validation-for="delivered_time" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="order_amount" class="control-label"></label>
+								<input asp-for="order_amount" class="form-control" />
+								<span asp-validation-for="order_amount" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="payment_method" class="control-label"></label>
+								<input asp-for="payment_method" class="form-control" />
+								<span asp-validation-for="payment_method" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<input type="submit" value="Create" class="btn btn-default" />
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<div>
+					<a asp-action="Index">Back to List</a>
+				</div>
+				</div></div></div></div>
+				@section Scripts {
+					@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+				}

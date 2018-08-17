@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LaundryGo", "LaundryGo\LaundryGo.csproj", "{A5331C18-F1CE-45C4-B3FC-079FB631EE68}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Laundry Go Customer Site", "Laundry Go Customer Site\Laundry Go Customer Site.csproj", "{D6737AB3-C160-478E-AF63-F2BBA7B98FC5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LaundryGoSP", "LaundryGoSP\LaundryGoSP.csproj", "{B5C0DC6A-2A10-4065-A09E-5E38BCE4EF45}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LaundryGoDriver", "LaundaryGODriver\LaundryGoDriver.csproj", "{FE2CE6B0-17E2-43B5-8003-B5F2E3737D3B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5331C18-F1CE-45C4-B3FC-079FB631EE68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5331C18-F1CE-45C4-B3FC-079FB631EE68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5331C18-F1CE-45C4-B3FC-079FB631EE68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5331C18-F1CE-45C4-B3FC-079FB631EE68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6737AB3-C160-478E-AF63-F2BBA7B98FC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6737AB3-C160-478E-AF63-F2BBA7B98FC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6737AB3-C160-478E-AF63-F2BBA7B98FC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6737AB3-C160-478E-AF63-F2BBA7B98FC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5C0DC6A-2A10-4065-A09E-5E38BCE4EF45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5C0DC6A-2A10-4065-A09E-5E38BCE4EF45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5C0DC6A-2A10-4065-A09E-5E38BCE4EF45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5C0DC6A-2A10-4065-A09E-5E38BCE4EF45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE2CE6B0-17E2-43B5-8003-B5F2E3737D3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE2CE6B0-17E2-43B5-8003-B5F2E3737D3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE2CE6B0-17E2-43B5-8003-B5F2E3737D3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE2CE6B0-17E2-43B5-8003-B5F2E3737D3B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D5A5FBB9-7A55-4C3A-B555-CC1D8E289216}
+	EndGlobalSection
+EndGlobal

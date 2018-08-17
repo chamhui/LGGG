@@ -1,0 +1,34 @@
+C:/Users/Syahrin Seth/Downloads/LaundryGo/LaundryGo/LaundryGo/Laundry Go Customer Site/bin/Debug/netcoreapp2.0/Laundry Go Customer Site.deps.json
+C:/Users/Syahrin Seth/Downloads/LaundryGo/LaundryGo/LaundryGo/Laundry Go Customer Site/bin/Debug/netcoreapp2.0/Laundry Go Customer Site.runtimeconfig.json
+C:/Users/Syahrin Seth/Downloads/LaundryGo/LaundryGo/LaundryGo/Laundry Go Customer Site/bin/Debug/netcoreapp2.0/Laundry Go Customer Site.runtimeconfig.dev.json
+C:/Users/Syahrin Seth/Downloads/LaundryGo/LaundryGo/LaundryGo/Laundry Go Customer Site/bin/Debug/netcoreapp2.0/Laundry Go Customer Site.dll
+C:/Users/Syahrin Seth/Downloads/LaundryGo/LaundryGo/LaundryGo/Laundry Go Customer Site/bin/Debug/netcoreapp2.0/Laundry Go Customer Site.pdb
+C:/Users/Syahrin Seth/Downloads/LaundryGo/LaundryGo/LaundryGo/Laundry Go Customer Site/obj/Debug/netcoreapp2.0/Laundry Go Customer Site.csprojResolveAssemblyReference.cache
+C:/Users/Syahrin Seth/Downloads/LaundryGo/LaundryGo/LaundryGo/Laundry Go Customer Site/obj/Debug/netcoreapp2.0/Laundry Go Customer Site.csproj.CoreCompileInputs.cache
+C:/Users/Syahrin Seth/Downloads/LaundryGo/LaundryGo/LaundryGo/Laundry Go Customer Site/obj/Debug/netcoreapp2.0/Laundry Go Customer Site.AssemblyInfoInputs.cache
+C:/Users/Syahrin Seth/Downloads/LaundryGo/LaundryGo/LaundryGo/Laundry Go Customer Site/obj/Debug/netcoreapp2.0/Laundry Go Customer Site.AssemblyInfo.cs
+C:/Users/Syahrin Seth/Downloads/LaundryGo/LaundryGo/LaundryGo/Laundry Go Customer Site/obj/Debug/netcoreapp2.0/Laundry Go Customer Site.dll
+C:/Users/Syahrin Seth/Downloads/LaundryGo/LaundryGo/LaundryGo/Laundry Go Customer Site/obj/Debug/netcoreapp2.0/Laundry Go Customer Site.pdb
+/Users/muhammadnorsyahrinseth/Desktop/LaundryGo/LaundryGo/LaundryGo/Laundry Go Customer Site/bin/Debug/netcoreapp2.0/Laundry Go Customer Site.deps.json
+/Users/muhammadnorsyahrinseth/Desktop/LaundryGo/LaundryGo/LaundryGo/Laundry Go Customer Site/bin/Debug/netcoreapp2.0/Laundry Go Customer Site.runtimeconfig.json
+/Users/muhammadnorsyahrinseth/Desktop/LaundryGo/LaundryGo/LaundryGo/Laundry Go Customer Site/bin/Debug/netcoreapp2.0/Laundry Go Customer Site.runtimeconfig.dev.json
+/Users/muhammadnorsyahrinseth/Desktop/LaundryGo/LaundryGo/LaundryGo/Laundry Go Customer Site/bin/Debug/netcoreapp2.0/Laundry Go Customer Site.dll
+/Users/muhammadnorsyahrinseth/Desktop/LaundryGo/LaundryGo/LaundryGo/Laundry Go Customer Site/bin/Debug/netcoreapp2.0/Laundry Go Customer Site.pdb
+/Users/muhammadnorsyahrinseth/Desktop/LaundryGo/LaundryGo/LaundryGo/Laundry Go Customer Site/obj/Debug/netcoreapp2.0/Laundry Go Customer Site.csprojResolveAssemblyReference.cache
+/Users/muhammadnorsyahrinseth/Desktop/LaundryGo/LaundryGo/LaundryGo/Laundry Go Customer Site/obj/Debug/netcoreapp2.0/Laundry Go Customer Site.csproj.CoreCompileInputs.cache
+/Users/muhammadnorsyahrinseth/Desktop/LaundryGo/LaundryGo/LaundryGo/Laundry Go Customer Site/obj/Debug/netcoreapp2.0/Laundry Go Customer Site.AssemblyInfoInputs.cache
+/Users/muhammadnorsyahrinseth/Desktop/LaundryGo/LaundryGo/LaundryGo/Laundry Go Customer Site/obj/Debug/netcoreapp2.0/Laundry Go Customer Site.AssemblyInfo.cs
+/Users/muhammadnorsyahrinseth/Desktop/LaundryGo/LaundryGo/LaundryGo/Laundry Go Customer Site/obj/Debug/netcoreapp2.0/Laundry Go Customer Site.dll
+/Users/muhammadnorsyahrinseth/Desktop/LaundryGo/LaundryGo/LaundryGo/Laundry Go Customer Site/obj/Debug/netcoreapp2.0/Laundry Go Customer Site.pdb
+C:\Users\LENOVO\Desktop\LaundryGo\LaundryGo\LaundryGo\LaundryGo\Laundry Go Customer Site\bin\Debug\netcoreapp2.0\Laundry Go Customer Site.deps.json
+C:\Users\LENOVO\Desktop\LaundryGo\LaundryGo\LaundryGo\LaundryGo\Laundry Go Customer Site\bin\Debug\netcoreapp2.0\Laundry Go Customer Site.runtimeconfig.json
+C:\Users\LENOVO\Desktop\LaundryGo\LaundryGo\LaundryGo\LaundryGo\Laundry Go Customer Site\bin\Debug\netcoreapp2.0\Laundry Go Customer Site.runtimeconfig.dev.json
+C:\Users\LENOVO\Desktop\LaundryGo\LaundryGo\LaundryGo\LaundryGo\Laundry Go Customer Site\bin\Debug\netcoreapp2.0\Laundry Go Customer Site.dll
+C:\Users\LENOVO\Desktop\LaundryGo\LaundryGo\LaundryGo\LaundryGo\Laundry Go Customer Site\bin\Debug\netcoreapp2.0\Laundry Go Customer Site.pdb
+C:\Users\LENOVO\Desktop\LaundryGo\LaundryGo\LaundryGo\LaundryGo\Laundry Go Customer Site\obj\Debug\netcoreapp2.0\Laundry Go Customer Site.csprojAssemblyReference.cache
+C:\Users\LENOVO\Desktop\LaundryGo\LaundryGo\LaundryGo\LaundryGo\Laundry Go Customer Site\obj\Debug\netcoreapp2.0\Laundry Go Customer Site.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\LaundryGo\LaundryGo\LaundryGo\LaundryGo\Laundry Go Customer Site\obj\Debug\netcoreapp2.0\Laundry Go Customer Site.AssemblyInfoInputs.cache
+C:\Users\LENOVO\Desktop\LaundryGo\LaundryGo\LaundryGo\LaundryGo\Laundry Go Customer Site\obj\Debug\netcoreapp2.0\Laundry Go Customer Site.AssemblyInfo.cs
+C:\Users\LENOVO\Desktop\LaundryGo\LaundryGo\LaundryGo\LaundryGo\Laundry Go Customer Site\obj\Debug\netcoreapp2.0\Laundry Go Customer Site.dll
+C:\Users\LENOVO\Desktop\LaundryGo\LaundryGo\LaundryGo\LaundryGo\Laundry Go Customer Site\obj\Debug\netcoreapp2.0\Laundry Go Customer Site.pdb
+C:\Users\LENOVO\Desktop\LaundryGo\LaundryGo\LaundryGo\LaundryGo\Laundry Go Customer Site\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs

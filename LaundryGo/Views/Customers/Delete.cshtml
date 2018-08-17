@@ -1,0 +1,75 @@
+﻿@model LaundryGo.Models.Customer
+
+@{
+	ViewData["Title"] = "Delete";
+}
+
+<div class="row">
+	<div class="col-lg-12">
+		<h1 class="page-header">Customer</h1>
+	</div>
+	<!-- /.col-lg-12 -->
+</div>
+<div class="row">
+	<div class="col-lg-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Details
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<h4>Are you sure you want to delete this?</h4>
+					<hr />
+					<dl class="dl-horizontal">
+						<dt>
+							@Html.DisplayNameFor(model => model.cust_name)
+						</dt>
+						<dd>
+							@Html.DisplayFor(model => model.cust_name)
+						</dd>
+						<dt>
+							@Html.DisplayNameFor(model => model.cust_fb)
+						</dt>
+						<dd>
+							@Html.DisplayFor(model => model.cust_fb)
+						</dd>
+						<dt>
+							@Html.DisplayNameFor(model => model.cust_google)
+						</dt>
+						<dd>
+							@Html.DisplayFor(model => model.cust_google)
+						</dd>
+						<dt>
+							@Html.DisplayNameFor(model => model.created_date)
+						</dt>
+						<dd>
+							@Html.DisplayFor(model => model.created_date)
+						</dd>
+						<dt>
+							@Html.DisplayNameFor(model => model.last_login)
+						</dt>
+						<dd>
+							@Html.DisplayFor(model => model.last_login)
+						</dd>
+						<dt>
+							<select asp-for="cust_status" asp-items="Html.GetEnumSelectList<StatusType>()" class="form-control" disabled></select>
+
+						</dt>
+						<dd>
+							@Html.DisplayFor(model => model.cust_status)
+						</dd>
+						<dt>
+							@Html.DisplayNameFor(model => model.cust_phone)
+						</dt>
+						<dd>
+							@Html.DisplayFor(model => model.cust_phone)
+						</dd>
+					</dl>
+
+					<form asp-action="Delete">
+						<input type="hidden" asp-for="cust_id" />
+						<input type="submit" value="Delete" class="btn btn-default" /> |
+						<a asp-action="Index">Back to List</a>
+					</form>
+				</div>
+				</div></div></div></div>

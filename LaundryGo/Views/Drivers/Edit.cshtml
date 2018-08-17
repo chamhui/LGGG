@@ -1,0 +1,95 @@
+﻿@model LaundryGo.Models.Driver
+
+@{
+	ViewData["Title"] = "Edit";
+}
+<div class="row">
+	<div class="col-lg-12">
+		<h1 class="page-header">Driver</h1>
+	</div>
+	<!-- /.col-lg-12 -->
+</div>
+<div class="row">
+	<div class="col-lg-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Edit Driver
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-4">
+						<form asp-action="Edit">
+							<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+							<input type="hidden" asp-for="dri_id" />
+							<div class="form-group">
+								<label asp-for="dri_name" class="control-label"></label>
+								<input asp-for="dri_name" class="form-control" />
+								<span asp-validation-for="dri_name" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="dri_fb" class="control-label"></label>
+								<input asp-for="dri_fb" class="form-control" />
+								<span asp-validation-for="dri_fb" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="dri_google" class="control-label"></label>
+								<input asp-for="dri_google" class="form-control" />
+								<span asp-validation-for="dri_google" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="dri_car_plate" class="control-label"></label>
+								<input asp-for="dri_car_plate" class="form-control" />
+								<span asp-validation-for="dri_car_plate" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="dri_IC" class="control-label"></label>
+								<input asp-for="dri_IC" class="form-control" />
+								<span asp-validation-for="dri_IC" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="dri_status" class="control-label"></label>
+								<select asp-for="dri_status" asp-items="Html.GetEnumSelectList<StatusType>()" class="form-control"></select>
+								<span asp-validation-for="dri_status" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="dri_phone" class="control-label"></label>
+								<input asp-for="dri_phone" class="form-control" />
+								<span asp-validation-for="dri_phone" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="dri_c_add_1" class="control-label"></label>
+								<input asp-for="dri_c_add_1" class="form-control" />
+								<span asp-validation-for="dri_c_add_1" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="dri_c_add_2" class="control-label"></label>
+								<input asp-for="dri_c_add_2" class="form-control" />
+								<span asp-validation-for="dri_c_add_2" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="dri_c_add_3" class="control-label"></label>
+								<input asp-for="dri_c_add_3" class="form-control" />
+								<span asp-validation-for="dri_c_add_3" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<label asp-for="dri_c_post" class="control-label"></label>
+								<input asp-for="dri_c_post" class="form-control" />
+								<span asp-validation-for="dri_c_post" class="text-danger"></span>
+							</div>
+							<div class="form-group">
+								<input type="submit" value="Save" class="btn btn-default" />
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<div>
+					<a asp-action="Index">Back to List</a>
+				</div>
+</div>
+			</div>
+		</div>
+	</div>
+				@section Scripts {
+					@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+				}

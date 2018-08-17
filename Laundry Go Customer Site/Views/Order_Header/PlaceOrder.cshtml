@@ -1,0 +1,179 @@
+﻿
+@{
+	ViewData["Title"] = "PlaceOrder";
+	Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+@section head{
+	<title>Laundry Go - Main Page</title>
+	<style>
+		/* Always set the map height explicitly to define the size of the div
+			 * element that contains the map. */
+
+		#map-new {
+			height: 400px;
+			width:100%;
+		}
+
+		/* Optional: Makes the sample page fill the window. */
+
+		html,
+		body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+}<header class="masthead">
+	<div class="container h-100">
+		<div class="row h-100">
+			<div class="col-lg-12">
+				<div class="card" style="margin-top:100px">
+					<h5 class="card-header">Pickup Information</h5>
+					<div class="card-body">
+						<form method="POST" role="form">
+							<div class="row">
+
+								<div class="col-lg-6">
+
+									<div class="form-group">
+										<label for="">Please enter deliver location address:</label>
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Address 1" name="add_1" value="">
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Address 2" name="add_2">
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Address 3" name="add_3">
+									</div>
+									<div class="row">
+										<div class="col-lg-6">
+											<div class="form-group">
+												<input type="text" class="form-control" placeholder="Post Code" name="add_4">
+											</div>
+										</div>
+										<div class="col-lg-6">
+											<div class="form-group">
+												<input type="text" class="form-control" placeholder="State" name="add_5">
+											</div>
+										</div>
+									</div>
+									<div class="from-group">
+										<small>Please enter address above for a deliver</small>
+										<br>
+										<input type="submit" class="btn btn-primary js-scroll-trigger" value="Next">
+										<button type="reset" class="btn btn-default js-scroll-trigger">Reset</button>
+
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<label for="map-new">Select Pickup Point:</label>
+									
+										<div id="map-new"></div>
+
+									
+									
+									<div class="form-row">
+										<div class="form-group col-md-6">
+											<input type="text" class="form-control" id="add_lat" name="add_lat">
+										</div>
+										<div class="form-group col-md-6">
+											<input type="text" class="form-control" id="add_long" name="add_long">
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+
+
+
+
+
+
+
+
+<footer>
+	<div class="container">
+		<p>&copy; Laundry Go 2018. All Rights Reserved.</p>
+		<ul class="list-inline">
+			<li class="list-inline-item">
+				<a href="#">Privacy</a>
+			</li>
+			<li class="list-inline-item">
+				<a href="#">Terms</a>
+			</li>
+			<li class="list-inline-item">
+				<a href="#">FAQ</a>
+			</li>
+		</ul>
+	</div>
+</footer>
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkY_x9vsdgETaBOAlvw8eJANTiuWGy7Xs" async
+				defer></script>
+
+<!-- Bootstrap core JavaScript -->
+<script src="../vendor/jquery/jquery.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="../js/new-age.min.js"></script>
+
+<script>
+
+
+
+	// get user locations
+	var position;
+	getLocation();
+
+	function getLocation() {
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(showPosition);
+		} else {
+			x.innerHTML = "Geolocation is not supported by this browser.";
+		}
+	}
+	var map;
+	var marker;
+	function showPosition(position) {
+		position = {
+			lng: position.coords.longitude,
+			lat: position.coords.latitude
+		}
+		map = new google.maps.Map(document.getElementById('map-new'), {
+			center: { lat: position.lat, lng: position.lng },
+			zoom: 17
+		});
+		marker = new google.maps.Marker({
+			position: { lat: position.lat, lng: position.lng },
+			map: map,
+			draggable: true
+		});
+		document.getElementById("add_lat").value = position.lat;
+		document.getElementById("add_long").value = position.lng;
+		google.maps.event.addListener(marker, 'dragend', function (event) {
+
+
+			document.getElementById("add_lat").value = event.latLng.lat();
+			document.getElementById("add_long").value = event.latLng.lng();
+		});
+	}
+
+			// google.maps.event.addDomListener(window, 'load', initialize());
+</script>
