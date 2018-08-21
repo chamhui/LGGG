@@ -26,6 +26,8 @@ namespace Laundry_Go_Customer_Site.Models
 		public int cust_status { get; set; }
 		[Display(Name = "Phone")]
 		public string cust_phone { get; set; }
+		[Display(Name = "Email")]
+		public string cust_email { get; set; }
 
 	}
 }

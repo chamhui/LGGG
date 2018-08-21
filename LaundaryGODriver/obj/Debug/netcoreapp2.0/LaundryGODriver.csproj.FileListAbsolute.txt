@@ -9,3 +9,14 @@ C:\Users\LENOVO\Desktop\LaundryGo\LaundryGo\LaundryGo\LaundryGo\LaundaryGODriver
 C:\Users\LENOVO\Desktop\LaundryGo\LaundryGo\LaundryGo\LaundryGo\LaundaryGODriver\bin\Debug\netcoreapp2.0\LaundryGoDriver.pdb
 C:\Users\LENOVO\Desktop\LaundryGo\LaundryGo\LaundryGo\LaundryGo\LaundaryGODriver\obj\Debug\netcoreapp2.0\LaundryGoDriver.dll
 C:\Users\LENOVO\Desktop\LaundryGo\LaundryGo\LaundryGo\LaundryGo\LaundaryGODriver\obj\Debug\netcoreapp2.0\LaundryGoDriver.pdb
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundaryGODriver\bin\Debug\netcoreapp2.0\LaundryGoDriver.deps.json
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundaryGODriver\bin\Debug\netcoreapp2.0\LaundryGoDriver.runtimeconfig.json
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundaryGODriver\bin\Debug\netcoreapp2.0\LaundryGoDriver.runtimeconfig.dev.json
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundaryGODriver\bin\Debug\netcoreapp2.0\LaundryGoDriver.dll
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundaryGODriver\bin\Debug\netcoreapp2.0\LaundryGoDriver.pdb
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundaryGODriver\obj\Debug\netcoreapp2.0\LaundryGoDriver.csprojAssemblyReference.cache
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundaryGODriver\obj\Debug\netcoreapp2.0\LaundryGoDriver.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundaryGODriver\obj\Debug\netcoreapp2.0\LaundryGoDriver.AssemblyInfoInputs.cache
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundaryGODriver\obj\Debug\netcoreapp2.0\LaundryGoDriver.AssemblyInfo.cs
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundaryGODriver\obj\Debug\netcoreapp2.0\LaundryGoDriver.dll
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundaryGODriver\obj\Debug\netcoreapp2.0\LaundryGoDriver.pdb

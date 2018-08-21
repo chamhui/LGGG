@@ -43,3 +43,15 @@ C:\Users\LENOVO\Desktop\LaundryGo\LaundryGo\LaundryGo\LaundryGo\LaundryGo\obj\De
 C:\Users\LENOVO\Desktop\LaundryGo\LaundryGo\LaundryGo\LaundryGo\LaundryGo\obj\Debug\netcoreapp2.0\LaundryGo.dll
 C:\Users\LENOVO\Desktop\LaundryGo\LaundryGo\LaundryGo\LaundryGo\LaundryGo\obj\Debug\netcoreapp2.0\LaundryGo.pdb
 C:\Users\LENOVO\Desktop\LaundryGo\LaundryGo\LaundryGo\LaundryGo\LaundryGo\bin\Debug\netcoreapp2.0\LaundryGo.dll.config
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundryGo\bin\Debug\netcoreapp2.0\LaundryGo.dll.config
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundryGo\bin\Debug\netcoreapp2.0\LaundryGo.deps.json
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundryGo\bin\Debug\netcoreapp2.0\LaundryGo.runtimeconfig.json
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundryGo\bin\Debug\netcoreapp2.0\LaundryGo.runtimeconfig.dev.json
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundryGo\bin\Debug\netcoreapp2.0\LaundryGo.dll
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundryGo\bin\Debug\netcoreapp2.0\LaundryGo.pdb
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundryGo\obj\Debug\netcoreapp2.0\LaundryGo.csprojAssemblyReference.cache
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundryGo\obj\Debug\netcoreapp2.0\LaundryGo.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundryGo\obj\Debug\netcoreapp2.0\LaundryGo.AssemblyInfoInputs.cache
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundryGo\obj\Debug\netcoreapp2.0\LaundryGo.AssemblyInfo.cs
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundryGo\obj\Debug\netcoreapp2.0\LaundryGo.dll
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundryGo\obj\Debug\netcoreapp2.0\LaundryGo.pdb

@@ -34,7 +34,7 @@ namespace Laundry_Go_Customer_Site.Controllers
 			claimsIdentity.AddClaim(new Claim(ClaimTypes.NameIdentifier, user_SPData.cust_id.ToString(), "http://www.w3.org/2001/XMLSchema#string"));
 			claimsIdentity.AddClaim(new Claim(ClaimTypes.Name, user_SPData.cust_name.ToString(), "http://www.w3.org/2001/XMLSchema#string"));
 			claimsIdentity.AddClaim(new Claim("http://schemas.microsoft.com/accesscontrolservice/2010/07/claims/identityprovider", "Custom Identity", "http://www.w3.org/2001/XMLSchema#string"));
-
+			//claimsIdentity.AddClaim(new Claim(ClaimTypes.MobilePhone, user_SPData.cust_phone.ToString(), "http://www.w3.org/2001/XMLSchema#string"));
 			ClaimsPrincipal principal = new ClaimsPrincipal(claimsIdentity);
 			//AuthenticationManager.SignIn(new AuthenticationProperties() { IsPersistent = isPersistent }, identity);
 
@@ -43,8 +43,36 @@ namespace Laundry_Go_Customer_Site.Controllers
 			httpContext.User = principal;
 			string aaa = httpContext.User.Identity.Name;
 			string bbb = httpContext.User.Identity.GetUserName();
-			string ccc = httpContext.User.Identity.GetUserId();
+			if(user_SPData.cust_phone is null)
+			{
+				httpContext.Session.SetString("user_phone","required");
+			}
+			else
+			{
+				httpContext.Session.SetString("user_phone", "existed");
+			}
 
+
+		}
+
+		public async Task EmailSignIn(HttpContext httpContext, Customer user, bool isPersistent = false)
+		{
+			//user.dri_google = GetHash(user.dri_google);
+			var user_SPData = _context.Customer.AsNoTracking().FirstOrDefault(m => m.cust_email == user.cust_email && m.cust_phone == user.cust_phone);
+			//ClaimsIdentity identity = new ClaimsIdentity(this.GetUserClaims(user_AdminData), CookieAuthenticationDefaults.AuthenticationScheme);
+			ClaimsIdentity claimsIdentity = new ClaimsIdentity(DefaultAuthenticationTypes.ApplicationCookie, ClaimTypes.NameIdentifier, ClaimTypes.Role);
+			claimsIdentity.AddClaim(new Claim(ClaimTypes.NameIdentifier, user_SPData.cust_id.ToString(), "http://www.w3.org/2001/XMLSchema#string"));
+			claimsIdentity.AddClaim(new Claim(ClaimTypes.Name, user_SPData.cust_name.ToString(), "http://www.w3.org/2001/XMLSchema#string"));
+			claimsIdentity.AddClaim(new Claim("http://schemas.microsoft.com/accesscontrolservice/2010/07/claims/identityprovider", "Custom Identity", "http://www.w3.org/2001/XMLSchema#string"));
+			//claimsIdentity.AddClaim(new Claim(ClaimTypes.MobilePhone, user_SPData.cust_phone.ToString(), "http://www.w3.org/2001/XMLSchema#string"));
+			ClaimsPrincipal principal = new ClaimsPrincipal(claimsIdentity);
+			//AuthenticationManager.SignIn(new AuthenticationProperties() { IsPersistent = isPersistent }, identity);
+
+			await httpContext.SignInAsync(principal);
+
+			httpContext.User = principal;
+			string aaa = httpContext.User.Identity.Name;
+			string bbb = httpContext.User.Identity.GetUserName();
 
 
 		}

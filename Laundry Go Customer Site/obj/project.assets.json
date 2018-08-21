@@ -13235,11 +13235,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\LaundryGo\\LaundryGo\\LaundryGo\\LaundryGo\\Laundry Go Customer Site\\Laundry Go Customer Site.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\Github\\LaundryGo\\Laundry Go Customer Site\\Laundry Go Customer Site.csproj",
       "projectName": "Laundry Go Customer Site",
-      "projectPath": "C:\\Users\\LENOVO\\Desktop\\LaundryGo\\LaundryGo\\LaundryGo\\LaundryGo\\Laundry Go Customer Site\\Laundry Go Customer Site.csproj",
+      "projectPath": "C:\\Users\\LENOVO\\Desktop\\Github\\LaundryGo\\Laundry Go Customer Site\\Laundry Go Customer Site.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LENOVO\\Desktop\\LaundryGo\\LaundryGo\\LaundryGo\\LaundryGo\\Laundry Go Customer Site\\obj\\",
+      "outputPath": "C:\\Users\\LENOVO\\Desktop\\Github\\LaundryGo\\Laundry Go Customer Site\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

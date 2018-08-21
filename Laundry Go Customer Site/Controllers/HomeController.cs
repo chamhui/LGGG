@@ -13,6 +13,8 @@ using System.Text;
 using Microsoft.AspNetCore.Session;
 using Microsoft.AspNetCore.Http;
 using Laundry_Go_Customer_Site.Controllers;
+using Microsoft.EntityFrameworkCore;
+using System.Data.SqlClient;
 
 namespace Laundry_Go_Customer_Site.Controllers
 {
@@ -135,7 +137,8 @@ namespace Laundry_Go_Customer_Site.Controllers
 				var userdata = new Customer()
 				{
 					cust_google = ct.cust_google,
-					cust_name =ct.cust_name
+					cust_name =ct.cust_name,
+								cust_email = ct.cust_email
 
 				};
 				CustomersController _userManager = new CustomersController(this._context);
@@ -147,13 +150,21 @@ namespace Laundry_Go_Customer_Site.Controllers
 				var userdata = new Customer()
 				{
 					cust_google = ct.cust_google,
-					cust_name = ct.cust_name
+					cust_name = ct.cust_name,
+					cust_email= ct.cust_email
+
 				};
 				userdata.created_date = DateTime.Now;
 				userdata.cust_status = 1;
 				CustomersController _userManager = new CustomersController(_context);
 				_userManager.RegisterNewCustomer(userdata);
+				await _userManager.SignIn(this.HttpContext, userdata);
 			}
+			if(HttpContext.Session.GetString("user_phone")== "required")
+			{
+				return RedirectToAction("PhoneVerification", "Home", null);
+			}
+
 			return RedirectToAction("Index", "Order_Header", null);
 		}
 
@@ -171,8 +182,65 @@ namespace Laundry_Go_Customer_Site.Controllers
 
             return View();
         }
+		public IActionResult PhoneVerification()
+		{
+			//ViewData["Message"] = "Your contact page.";
 
-        public IActionResult Error()
+			return View();
+		}
+
+		[HttpPost]
+		public async Task<IActionResult> PhoneVerification(string user_phone)
+		{
+			var rowsAffected = _context.Database.ExecuteSqlCommand("Update Customer set cust_phone=@user_phone  where cust_id =@cust_id", new SqlParameter("@user_phone", user_phone), new SqlParameter("@cust_id", HttpContext.User.Identity.Name));
+			return RedirectToAction("Index", "Order_Header", null);
+		}
+
+		[HttpPost]
+		public async Task<IActionResult> Index(string user_phone,string user_email)
+		{
+			CustomersController _userManager = new CustomersController(this._context);
+			var userdata = new Customer()
+			{
+				cust_email = user_email,
+				cust_phone = user_phone
+			};
+			if (!ModelState.IsValid)
+				return View();
+			try
+			{
+			
+				await _userManager.EmailSignIn(this.HttpContext, userdata);
+			}
+			catch { 
+			if(HttpContext.User.Identity.IsAuthenticated ==false && CheckPhone(user_phone,user_email))
+			{
+					userdata.cust_name = user_email;
+					_userManager.RegisterNewCustomer(userdata);
+			
+				await _userManager.EmailSignIn(this.HttpContext, userdata);
+			}
+			}
+			return RedirectToAction("Index", "Order_Header", null);
+		}
+
+		public Boolean CheckPhone(string user_phone,string user_email)
+		{
+			//var rowsAffected = _context.Database.ExecuteSqlCommand("SELECT * FROM Customer where cust_phone=@user_phone", new SqlParameter("@user_phone", user_phone));
+
+			int count = _context.Customer.Where(m => m.cust_phone == user_phone || m.cust_email == user_email).Count();
+
+			if (count > 0)
+			{
+				return false;
+			}
+			else
+			{
+				return true;
+			}
+		}
+
+		public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
@@ -205,8 +273,7 @@ namespace Laundry_Go_Customer_Site.Controllers
 
 						userdata.cust_google = id;
 						userdata.cust_name = name;
-
-
+						userdata.cust_email = email;
 
 						//var result = new User_AdminController(_context).SignIn(HttpContext, userdata);
 						//RedirectToAction("../{User_AdminController}/SignIn", new { httpContext = this.HttpContext, user= userdata });

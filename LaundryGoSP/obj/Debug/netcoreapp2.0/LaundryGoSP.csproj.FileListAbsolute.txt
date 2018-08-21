@@ -9,3 +9,14 @@ C:\Users\LENOVO\Desktop\LaundryGo\LaundryGo\LaundryGo\LaundryGo\LaundryGoSP\bin\
 C:\Users\LENOVO\Desktop\LaundryGo\LaundryGo\LaundryGo\LaundryGo\LaundryGoSP\bin\Debug\netcoreapp2.0\LaundryGoSP.pdb
 C:\Users\LENOVO\Desktop\LaundryGo\LaundryGo\LaundryGo\LaundryGo\LaundryGoSP\obj\Debug\netcoreapp2.0\LaundryGoSP.dll
 C:\Users\LENOVO\Desktop\LaundryGo\LaundryGo\LaundryGo\LaundryGo\LaundryGoSP\obj\Debug\netcoreapp2.0\LaundryGoSP.pdb
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundryGoSP\bin\Debug\netcoreapp2.0\LaundryGoSP.deps.json
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundryGoSP\bin\Debug\netcoreapp2.0\LaundryGoSP.runtimeconfig.json
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundryGoSP\bin\Debug\netcoreapp2.0\LaundryGoSP.runtimeconfig.dev.json
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundryGoSP\bin\Debug\netcoreapp2.0\LaundryGoSP.dll
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundryGoSP\bin\Debug\netcoreapp2.0\LaundryGoSP.pdb
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundryGoSP\obj\Debug\netcoreapp2.0\LaundryGoSP.csprojAssemblyReference.cache
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundryGoSP\obj\Debug\netcoreapp2.0\LaundryGoSP.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundryGoSP\obj\Debug\netcoreapp2.0\LaundryGoSP.AssemblyInfoInputs.cache
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundryGoSP\obj\Debug\netcoreapp2.0\LaundryGoSP.AssemblyInfo.cs
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundryGoSP\obj\Debug\netcoreapp2.0\LaundryGoSP.dll
+C:\Users\LENOVO\Desktop\Github\LaundryGo\LaundryGoSP\obj\Debug\netcoreapp2.0\LaundryGoSP.pdb

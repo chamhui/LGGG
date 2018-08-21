@@ -95,6 +95,8 @@ string deliver_add_1, string deliver_add_2, string deliver_add_3, string deliver
 		}
 			public async Task<IActionResult> Index()
         {
+
+
 			string query = "SELECT * FROM Order_Header oh left join " +
 				"(select cust_name, cust_id as cid from Customer) cust on cust.cid = oh.cust_id left join " +
 		"(select dri_name as pickup_dri_name, dri_id as pid from Driver) pd on pd.pid = oh.pickup_dri_id left join " +
