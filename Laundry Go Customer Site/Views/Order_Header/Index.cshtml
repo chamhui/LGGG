@@ -1,9 +1,11 @@
 ﻿@model IEnumerable<Laundry_Go_Customer_Site.Models.Order_Header>
+
 @{
 	ViewData["Title"] = "Index";
 	Layout = "_LayoutLogin";
 
 }
+
 @section head{
 	<link href="../theme/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
 	<!-- DataTables CSS -->
@@ -14,244 +16,244 @@
 	<link href="../theme/dist/css/sb-admin-2.css" rel="stylesheet">
 	<!-- Custom Fonts -->
 	<link href="../theme/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<style>
-
-		p.status {
-			font-size: 10px !important;
-		}
-
-		label {
-			font-size: 10px;
-		}
-
-		.panel-body {
-			padding-bottom: 0px;
-		}
-
-		hr {
-			margin-bottom: 0px;
-		}
-
-		.status-active {
-			color: #337ab7;
-		}
-	</style>
+    <style>
+        p.status{
+            font-size:10px !important;
+        }
+        
+        label{
+            font-size:10px;
+        }
+        .panel-body {
+            padding-bottom: 0px;
+        }
+        hr {
+            margin-bottom: 0px;
+        }
+        .status-active {
+            color: #337ab7;
+        }
+    </style>
 }
 <div class="row">
 	<div class="col-lg-12">
 		<h1 class="page-header">Order List</h1>
+
 	</div>
 	<!-- /.col-lg-12 -->
 </div>
 <div class="row">
 	<div class="col-lg-12">
+		
+			<!-- /.panel-heading -->
+			<div class="panel-body">
 
-		<!-- /.panel-heading -->
-		<div class="panel-body">
-			<div class="row">
-				<div class="col-md-6">
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<div class="content">
-								<div class="row">
-									<div class="col-xs-2 text-center">
-										<i class="fa fa-truck fa-2x status-active" title="Awaiting Pickup"></i>
-									</div>
-									<div class="col-xs-2 text-center status-active">
-										<i class="fa fa-truck fa-2x" title="Pick Up"></i>
-									</div>
-									<div class="col-xs-2 text-center status-active">
-										<i class="fa fa-truck fa-2x" title="Washing In Progress"></i>
-									</div>
-									<div class="col-xs-2 text-center">
-										<i class="fa fa-truck fa-2x" title="Washing Completed"></i>
-									</div>
-									<div class="col-xs-2 text-center">
-										<i class="fa fa-truck fa-2x" title="Delivering"></i>
-									</div>
-									<div class="col-xs-2 text-center">
-										<i class="fa fa-truck fa-2x" title="Done"></i>
-									</div>
-								</div>
-								<hr />
-								<div class="row">
-									<div class="col-xs-4">
-										<div class="form-group">
-											<label for="bag">Total Bag</label>
-											<input type="text" class="form-control" name="bag" value="5" disabled />
-										</div>
-									</div>
-									<div class="col-xs-4">
-										<div class="form-group">
-											<label for="total_weight">Total Weight</label>
-											<input type="text" class="form-control" name="total_weight" value="34kg" disabled />
-										</div>
-									</div>
-									<div class="col-xs-4">
-										<div class="form-group">
-											<label for="price">Price</label>
-											<input type="text" class="form-control" name="price" value="rm23.00" disabled />
-										</div>
-									</div>
-									<div class="col-xs-6">
-										<div class="form-group">
-											<label for="pickup">Pickup</label>
-											<input type="text" class="form-control" name="pickup" value="12:00 | 12/08/18" disabled />
-										</div>
-									</div>
-									<div class="col-xs-6">
-										<div class="form-group">
-											<label for="dropoff">Dropoff</label>
-											<input type="text" class="form-control" name="dropoff" value="12:00 | 12/08/18" disabled />
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<div class="content">
-								<div class="row">
-									<div class="col-xs-2 text-center">
-										<i class="fa fa-truck fa-2x status-active" title="Awaiting Pickup"></i>
-									</div>
-									<div class="col-xs-2 text-center">
-										<i class="fa fa-truck fa-2x" title="Pick Up"></i>
-									</div>
-									<div class="col-xs-2 text-center">
-										<i class="fa fa-truck fa-2x" title="Washing In Progress"></i>
-									</div>
-									<div class="col-xs-2 text-center">
-										<i class="fa fa-truck fa-2x" title="Washing Completed"></i>
-									</div>
-									<div class="col-xs-2 text-center">
-										<i class="fa fa-truck fa-2x" title="Delivering"></i>
-									</div>
-									<div class="col-xs-2 text-center">
-										<i class="fa fa-truck fa-2x" title="Done"></i>
-									</div>
-								</div>
-								<hr />
-								<div class="row">
-									<div class="col-xs-4">
-										<div class="form-group">
-											<label for="bag">Total Bag</label>
-											<input type="text" class="form-control" name="bag" value="5" disabled />
-										</div>
-									</div>
-									<div class="col-xs-4">
-										<div class="form-group">
-											<label for="total_weight">Total Weight</label>
-											<input type="text" class="form-control" name="total_weight" value="34kg" disabled />
-										</div>
-									</div>
-									<div class="col-xs-4">
-										<div class="form-group">
-											<label for="price">Price</label>
-											<input type="text" class="form-control" name="price" value="rm23.00" disabled />
-										</div>
-									</div>
-									<div class="col-xs-6">
-										<div class="form-group">
-											<label for="pickup">Pickup</label>
-											<input type="text" class="form-control" name="pickup" value="12:00 | 12/08/18" disabled />
-										</div>
-									</div>
-									<div class="col-xs-6">
-										<div class="form-group">
-											<label for="dropoff">Dropoff</label>
-											<input type="text" class="form-control" name="dropoff" value="12:00 | 12/08/18" disabled />
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-6">
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<div class="content">
-								<div class="row">
-									<div class="col-xs-2 text-center">
-										<i class="fa fa-truck fa-2x status-active" title="Awaiting Pickup"></i>
-									</div>
-									<div class="col-xs-2 text-center">
-										<i class="fa fa-truck fa-2x" title="Pick Up"></i>
-									</div>
-									<div class="col-xs-2 text-center">
-										<i class="fa fa-truck fa-2x" title="Washing In Progress"></i>
-									</div>
-									<div class="col-xs-2 text-center">
-										<i class="fa fa-truck fa-2x" title="Washing Completed"></i>
-									</div>
-									<div class="col-xs-2 text-center">
-										<i class="fa fa-truck fa-2x" title="Delivering"></i>
-									</div>
-									<div class="col-xs-2 text-center">
-										<i class="fa fa-truck fa-2x" title="Done"></i>
-									</div>
-								</div>
-								<hr />
-								<div class="row">
-									<div class="col-xs-4">
-										<div class="form-group">
-											<label for="bag">Total Bag</label>
-											<input type="text" class="form-control" name="bag" value="5" disabled />
-										</div>
-									</div>
-									<div class="col-xs-4">
-										<div class="form-group">
-											<label for="total_weight">Total Weight</label>
-											<input type="text" class="form-control" name="total_weight" value="34kg" disabled />
-										</div>
-									</div>
-									<div class="col-xs-4">
-										<div class="form-group">
-											<label for="price">Price</label>
-											<input type="text" class="form-control" name="price" value="rm23.00" disabled />
-										</div>
-									</div>
-									<div class="col-xs-6">
-										<div class="form-group">
-											<label for="pickup">Pickup</label>
-											<input type="text" class="form-control" name="pickup" value="12:00 | 12/08/18" disabled />
-										</div>
-									</div>
-									<div class="col-xs-6">
-										<div class="form-group">
-											<label for="dropoff">Dropoff</label>
-											<input type="text" class="form-control" name="dropoff" value="12:00 | 12/08/18" disabled />
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col-xs-2 text-center">
+                                            <i class="fa fa-clock-o fa-2x status-active" title="Awaiting Pickup"></i>
+                                        </div>
+                                        <div class="col-xs-2 text-center status-active">
+                                            <i class="fa fa-truck fa-2x" title="Pick Up"></i>
+                                        </div>
+                                        <div class="col-xs-2 text-center status-active">
+                                            <i class="fa fa-tint fa-2x" title="Washing In Progress"></i>
+                                        </div>
+                                        <div class="col-xs-2 text-center">
+                                            <i class="fa fa-tint fa-2x" title="Washing Completed"></i>
+                                        </div>
+                                        <div class="col-xs-2 text-center">
+                                            <i class="fa fa-truck fa-2x" title="Delivering"></i>
+                                        </div>
+                                        <div class="col-xs-2 text-center">
+                                            <i class="fa fa-check-circle fa-2x" title="Done"></i>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <div class="form-group">
+                                                <label for="bag">Total Bag</label>
+                                                <input type="text" class="form-control" name="bag" value="5" disabled />
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <div class="form-group">
+                                                <label for="total_weight">Total Weight</label>
+                                                <input type="text" class="form-control" name="total_weight" value="34kg" disabled />
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <div class="form-group">
+                                                <label for="price">Price</label>
+                                                <input type="text" class="form-control" name="price" value="rm23.00" disabled />
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <div class="form-group">
+                                                <label for="pickup">Pickup</label>
+                                                <input type="text" class="form-control" name="pickup" value="12:00 | 12/08/18" disabled />
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <div class="form-group">
+                                                <label for="dropoff">Dropoff</label>
+                                                <input type="text" class="form-control" name="dropoff" value="12:00 | 12/08/18" disabled />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col-xs-2 text-center">
+                                            <i class="fa fa-clock-o fa-2x status-active" title="Awaiting Pickup"></i>
+                                        </div>
+                                        <div class="col-xs-2 text-center">
+                                            <i class="fa fa-truck fa-2x" title="Pick Up"></i>
+                                        </div>
+                                        <div class="col-xs-2 text-center">
+                                            <i class="fa fa-tint fa-2x" title="Washing In Progress"></i>
+                                        </div>
+                                        <div class="col-xs-2 text-center">
+                                            <i class="fa fa-tint fa-2x" title="Washing Completed"></i>
+                                        </div>
+                                        <div class="col-xs-2 text-center">
+                                            <i class="fa fa-truck fa-2x" title="Delivering"></i>
+                                        </div>
+                                        <div class="col-xs-2 text-center">
+                                            <i class="fa fa-check-circle fa-2x" title="Done"></i>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <div class="form-group">
+                                                <label for="bag">Total Bag</label>
+                                                <input type="text" class="form-control" name="bag" value="5" disabled />
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <div class="form-group">
+                                                <label for="total_weight">Total Weight</label>
+                                                <input type="text" class="form-control" name="total_weight" value="34kg" disabled />
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <div class="form-group">
+                                                <label for="price">Price</label>
+                                                <input type="text" class="form-control" name="price" value="rm23.00" disabled />
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <div class="form-group">
+                                                <label for="pickup">Pickup</label>
+                                                <input type="text" class="form-control" name="pickup" value="12:00 | 12/08/18" disabled />
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <div class="form-group">
+                                                <label for="dropoff">Dropoff</label>
+                                                <input type="text" class="form-control" name="dropoff" value="12:00 | 12/08/18" disabled />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
-		</div>
-		<!-- /.col-lg-12 -->
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col-xs-2 text-center">
+                                            <i class="fa fa-clock-o fa-2x status-active" title="Awaiting Pickup"></i>
+                                        </div>
+                                        <div class="col-xs-2 text-center status-active">
+                                            <i class="fa fa-truck fa-2x" title="Pick Up"></i>
+                                        </div>
+                                        <div class="col-xs-2 text-center status-active">
+                                            <i class="fa fa-tint fa-2x" title="Washing In Progress"></i>
+                                        </div>
+                                        <div class="col-xs-2 text-center status-active">
+                                            <i class="fa fa-tint fa-2x" title="Washing Completed"></i>
+                                        </div>
+                                        <div class="col-xs-2 text-center status-active">
+                                            <i class="fa fa-truck fa-2x" title="Delivering"></i>
+                                        </div>
+                                        <div class="col-xs-2 text-center">
+                                            <i class="fa fa-check-circle fa-2x" title="Done"></i>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <div class="form-group">
+                                                <label for="bag">Total Bag</label>
+                                                <input type="text" class="form-control" name="bag" value="5" disabled />
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <div class="form-group">
+                                                <label for="total_weight">Total Weight</label>
+                                                <input type="text" class="form-control" name="total_weight" value="34kg" disabled />
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <div class="form-group">
+                                                <label for="price">Price</label>
+                                                <input type="text" class="form-control" name="price" value="rm23.00" disabled />
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <div class="form-group">
+                                                <label for="pickup">Pickup</label>
+                                                <input type="text" class="form-control" name="pickup" value="12:00 | 12/08/18" disabled />
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <div class="form-group">
+                                                <label for="dropoff">Dropoff</label>
+                                                <input type="text" class="form-control" name="dropoff" value="12:00 | 12/08/18" disabled />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                </div>
+		
+				
+
 	</div>
-	@section foot{
-		<!-- DataTables JavaScript -->
-		<script src="../theme/vendor/datatables/js/jquery.dataTables.min.js"></script>
-		<script src="../theme/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
-		<script src="../theme/vendor/datatables-responsive/dataTables.responsive.js"></script>
-		<!-- Custom Theme JavaScript -->
-		<script src="../dist/js/sb-admin-2.js"></script>
-		<!-- Page-Level Demo Scripts - Tables - Use for reference -->
-		<script>
-			$(document).ready(function () {
-				$('#dataTables-example').DataTable({
-					responsive: true
-				});
+	<!-- /.col-lg-12 -->
+</div>
+@section foot{
+	<!-- DataTables JavaScript -->
+	<script src="../theme/vendor/datatables/js/jquery.dataTables.min.js"></script>
+	<script src="../theme/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+	<script src="../theme/vendor/datatables-responsive/dataTables.responsive.js"></script>
+	<!-- Custom Theme JavaScript -->
+	<script src="../dist/js/sb-admin-2.js"></script>
+	<!-- Page-Level Demo Scripts - Tables - Use for reference -->
+	<script>
+		$(document).ready(function () {
+			$('#dataTables-example').DataTable({
+				responsive: true
 			});
-		</script>
-	}
+		});
+	</script>
+
+}
