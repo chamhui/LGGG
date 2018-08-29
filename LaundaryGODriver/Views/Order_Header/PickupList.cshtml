@@ -169,7 +169,7 @@
 								@Html.DisplayFor(modelItem => item.payment_method)
 							</td>
 							<td>
-								<a asp-action="ToWashing" asp-route-id="@item.order_id">Sent to Service Provider</a> |
+								@*<a asp-action="ToWashing" asp-route-id="@item.order_id">Sent to Service Provider</a> |*@
 								<a asp-action="BackAwaitPickUpList" asp-route-id="@item.order_id">Undo</a>
 								@*<a asp-action="Details" asp-route-id="@item.order_id">Details</a> |
 		<a asp-action="Delete" asp-route-id="@item.order_id">Delete</a>*@

@@ -130,10 +130,10 @@
 								@Html.DisplayFor(modelItem => item.order_weight)
 							</td>
 							<td>
-								@Html.DisplayFor(modelItem => item.order_pickup_add)
+								<a href="http://maps.google.com/maps?q=@Html.DisplayFor(modelItem => item.order_pickup_add)" target="_blank">View</a>
 							</td>
 							<td>
-								@Html.DisplayFor(modelItem => item.order_deliver_add)
+								<a href="http://maps.google.com/maps?q=@Html.DisplayFor(modelItem => item.order_deliver_add)" target="_blank">View</a>
 							</td>
 							<td>
 								@Html.DisplayFor(modelItem => item.deliver_dri_id)
@@ -172,7 +172,7 @@
 								<a asp-action="ToDone" asp-route-id="@item.order_id">Customer Received</a> |
 								<a asp-action="BackWashCompleted" asp-route-id="@item.order_id">Undo</a>
 								@*<a asp-action="Details" asp-route-id="@item.order_id">Details</a> |
-		<a asp-action="Delete" asp-route-id="@item.order_id">Delete</a>*@
+			<a asp-action="Delete" asp-route-id="@item.order_id">Delete</a>*@
 							</td>
 						</tr>
 						}

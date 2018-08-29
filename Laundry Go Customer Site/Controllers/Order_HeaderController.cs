@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using System.Data.SqlClient;
 using Microsoft.AspNet.Identity;
+using System.Globalization;
 
 namespace Laundry_Go_Customer_Site.Controllers
 {
@@ -27,6 +28,11 @@ namespace Laundry_Go_Customer_Site.Controllers
 		//[Authorize(Policy = "Admin")]
 		//
 		public IActionResult PlaceOrder()
+		{
+
+			return View();
+		}
+		public IActionResult Requested()
 		{
 
 			return View();
@@ -89,9 +95,20 @@ string deliver_add_1, string deliver_add_2, string deliver_add_3, string deliver
 		}
 
 		[HttpPost]
-		public IActionResult PlaceOrder(string add_1, string add_2, string add_3, string add_4, string add_5, string add_lat, string add_long)
+		public IActionResult PlaceOrder(string order_bags, string order_weight, string order_pickup_time, string order_pickup_day, string order_dropoff_time, string order_dropoff_day, string order_pickup_add_1,string order_deliver_add_1,string lat_pickup, string lng_pickup, string lat_dropoff,string lng_dropoff)
 		{
-			return RedirectToAction ("PlaceOrder2","Order_Header",new { add_1, add_2, add_3, add_4, add_5, add_lat, add_long });
+
+
+			DateTime Pickup =DateTime.ParseExact(order_pickup_day + " "+ order_pickup_time, "yyyy-MM-dd HH:mm",System.Globalization.CultureInfo.InvariantCulture);
+			DateTime Dropoff = DateTime.ParseExact(order_dropoff_day + " " + order_dropoff_time, "yyyy-MM-dd HH:mm", System.Globalization.CultureInfo.InvariantCulture);
+			string sql = "INSERT INTO Order_Header(cust_id,sp_id,status_id,order_pickup_add,order_deliver_add,request_time,order_amount,order_pickup_add_1,order_deliver_add_1,awaiting_pickup_time,pickup_time,washing_time,washing_completed_time,delivering_time,delivered_time,pickup_dri_id,deliver_dri_id,order_weight,order_bags,order_pickup_time,order_dropoff_time)      VALUES(@cust_id,@sp_id,'0',@order_pickup_add,@order_deliver_add,getdate(),@order_amount,@order_pickup_add_1,@order_deliver_add_1,getdate(),getdate(),getdate(),getdate(),getdate(),getdate(),'0','0',@order_weight,@order_bags,@order_pickup_time,@order_dropoff_time)";
+			var rowsAffected = _context.Database.ExecuteSqlCommand(sql, new SqlParameter("@cust_id", HttpContext.User.Identity.Name), new SqlParameter("@sp_id", ClosestSP(lng_pickup, lat_pickup)),  new SqlParameter("@order_pickup_add", lat_pickup + "," + lng_pickup), new SqlParameter("@order_deliver_add", lat_dropoff + "," + lng_dropoff), new SqlParameter("@order_amount", Convert.ToDecimal(order_weight)*3), new SqlParameter("@order_pickup_add_1", order_pickup_add_1), new SqlParameter("@order_deliver_add_1", order_deliver_add_1), new SqlParameter("@order_bags", order_bags), new SqlParameter("@order_pickup_time", Pickup), new SqlParameter("@order_dropoff_time", Dropoff), new SqlParameter("@order_weight", order_weight));
+
+
+			return RedirectToAction(nameof(Requested));
+
+
+			//return RedirectToAction ("PlaceOrder2","Order_Header",new { add_1, add_2, add_3, add_4, add_5, add_lat, add_long });
 		}
 			public async Task<IActionResult> Index()
         {
@@ -102,7 +119,7 @@ string deliver_add_1, string deliver_add_2, string deliver_add_3, string deliver
 		"(select dri_name as pickup_dri_name, dri_id as pid from Driver) pd on pd.pid = oh.pickup_dri_id left join " +
 	" (select dri_name as deliver_dri_name, dri_id as did from Driver) dd on dd.did = oh.deliver_dri_id left join " +
 	" (select status_id as sid,status_name as status_name from status_master) sm on oh.status_id = sm.sid left join " +
- " (select sp_name, sp_id as spid from service_provider) sp on sp.spid = oh.sp_id where status_id=0 and cust_id="+HttpContext.User.Identity.GetUserId() ;
+ " (select sp_name, sp_id as spid from service_provider) sp on sp.spid = oh.sp_id where status_id>0 and cust_id="+HttpContext.User.Identity.GetUserId()+" order by order_id desc" ;
             List<Order_Header> orderheader = _context.Order_Header.FromSql(query).ToList();
 			return View(orderheader.ToAsyncEnumerable());
         }

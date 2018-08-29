@@ -39,7 +39,7 @@
 							<div class="col-sm-6">
 								<div class="form-group">
 									<label>Total Laundry Bag(s)</label>
-									<select class="form-control">
+									<select class="form-control" name="order_bags">
 										<option value="">select</option>
 										<option value="1">1</option>
 										<option value="2">2</option>
@@ -55,7 +55,7 @@
 								</div>
 								<div class="form-group">
 									<label>Total Weight</label>
-									<input type="text" class="form-control" placeholder="kg">
+									<input type="text" class="form-control" name="order_weight" placeholder="kg">
 								</div>
 								
 							</div>
@@ -63,21 +63,21 @@
 								<div class="row">
 								<div class="form-group col-xs-6">
 									<label>Pickup Time</label>
-									<input type="time" class="form-control">
+									<input type="time" class="form-control" name="order_pickup_time">
 								</div>
 								<div class="form-group col-xs-6">
 									<label>Pickup Date</label>
-									<input type="date" class="form-control">
+									<input type="date" class="form-control" name="order_pickup_day">
 								</div>
 								</div>
 								<div class="row">
 								<div class="form-group col-xs-6">
 									<label>Dropoff Time</label>
-									<input type="time" class="form-control">
+									<input type="time" class="form-control" name="order_dropoff_time">
 								</div>
 								<div class="form-group col-xs-6">
 									<label>Dropoff Date</label>
-									<input type="date" class="form-control">
+									<input type="date" class="form-control" name="order_dropoff_day">
 								</div>
 								</div>
 								
@@ -102,11 +102,11 @@
 									</div>
 									<div class="form-group">
 										<label>Pickup Address</label>
-										<input type="textbox" class="form-control" placeholder="Pickup Address" name="add_1" value="" id="autocomplete">
+										<input type="text" class="form-control" placeholder="Pickup Address" name="order_pickup_add_1" value="" id="autocomplete">
 									</div>
 									<div class="form-group">
 										<label>Dropoff Address</label>
-										<input type="textbox" class="form-control" placeholder="Dropoff Address (Optional)" name="add_2" id="autocomplete2">
+										<input type="text" class="form-control" placeholder="Dropoff Address (Optional)" name="order_deliver_add_1" id="autocomplete2">
 										<small>Leave empty if the address is the same.</small>
 									</div>
 									<!--<div class="form-group">
@@ -114,10 +114,10 @@
 									</div>-->
 									<hr/>
 									<div class="from-group">
-										<input type="hidden" class="form-control" id="lat_pickup">
-										<input type="hidden" class="form-control" id="lng_pickup">
-										<input type="hidden" class="form-control" id="lat_dropoff">
-										<input type="hidden" class="form-control" id="lng_dropoff">
+										<input type="hidden" class="form-control" id="lat_pickup" name="lat_pickup">
+										<input type="hidden" class="form-control" id="lng_pickup" name="lng_pickup">
+										<input type="hidden" class="form-control" id="lat_dropoff" name="lat_dropoff">
+										<input type="hidden" class="form-control" id="lng_dropoff" name="lng_dropoff">
 										<button type="reset" class="btn btn-default js-scroll-trigger">Reset</button>
 										<input type="submit" class="btn btn-primary js-scroll-trigger" value="Next">
 

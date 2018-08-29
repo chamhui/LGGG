@@ -63,7 +63,14 @@ namespace Laundry_Go_Customer_Site.Models
 		public string order_pickup_add_5 { get; set; }
 		[Display(Name = "order_deliver_add_5")]
 		public string order_deliver_add_5 { get; set; }
-
+		[Display(Name = "order bags")]
+		public int order_bags { get; set; }
+		[Display(Name = "Order Pick Up Time")]
+		[DisplayFormat(DataFormatString = "{0:dd/MM/yyyy | hh:mm}")]
+		public DateTime order_pickup_time { get; set; }
+		[Display(Name = "Order Drop Off Time")]
+		[DisplayFormat(DataFormatString = "{0:dd/MM/yyyy | hh:mm}")]
+		public DateTime order_dropoff_time { get; set; }
 
 		[Display(Name = "Customer Name")]
 		public virtual string cust_name { get; set; }
