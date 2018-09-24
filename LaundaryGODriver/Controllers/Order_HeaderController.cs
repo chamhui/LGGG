@@ -32,7 +32,7 @@ namespace LaundryGoDriver.Controllers
 		"(select dri_name as pickup_dri_name, dri_id as pid from Driver) pd on pd.pid = oh.pickup_dri_id left join " +
 	" (select dri_name as deliver_dri_name, dri_id as did from Driver) dd on dd.did = oh.deliver_dri_id left join " +
 	" (select status_id as sid,status_name as status_name from status_master) sm on oh.status_id = sm.sid left join " +
- " (select sp_name, sp_id as spid from service_provider) sp on sp.spid = oh.sp_id where status_id=0";
+ " (select sp_name, sp_id as spid from service_provider) sp on sp.spid = oh.sp_id where status_id= 0";
             List<Order_Header> orderheader = _context.Order_Header.FromSql(query).ToList();
 			return View(orderheader.ToAsyncEnumerable());
         }

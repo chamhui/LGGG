@@ -63,7 +63,12 @@ namespace LaundryGoDriver.Models
 		public string order_pickup_add_5 { get; set; }
 		[Display(Name = "order_deliver_add_5")]
 		public string order_deliver_add_5 { get; set; }
-
+		[Display(Name = "order bags")]
+		public int order_bags { get; set; }
+		[Display(Name = "Order Pick Up Time")]
+		public DateTime order_pickup_time { get; set; }
+		[Display(Name = "Order Drop Off Time")]
+		public DateTime order_dropoff_time { get; set; }
 
 
 		[Display(Name = "Customer Name")]
