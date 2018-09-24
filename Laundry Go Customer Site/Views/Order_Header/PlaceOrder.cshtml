@@ -27,40 +27,139 @@
 		}
 	</style>
 }
+<br>
 <header class="masthead">
 	<div class="container">
 		<form method="POST" role="form">
 		<div class="row">
 			<div class="col-sm-12">
-				<div class="card">
-					<h3 class="card-header">Laundry Information</h3>
-					<div class="card-body">
+				<h1>Place Order</h1>
+				<div class="panel panel-default">
+					<div class="panel-heading"> Laundry Information</div>
+					<div class="panel-body">
 						<div class="row">
 							<div class="col-sm-6">
-								<div class="form-group">
-									<label>Total Laundry Bag(s)</label>
-									<select class="form-control">
-										<option value="">select</option>
-										<option value="1">1</option>
-										<option value="2">2</option>
-										<option value="3">3</option>
-										<option value="4">4</option>
-										<option value="5">5</option>
-										<option value="6">6</option>
-										<option value="7">7</option>
-										<option value="8">8</option>
-										<option value="9">9</option>
-										<option value="10">10</option>
-									</select>
+								<div class="container">
+									<h4>Bag Quantity:</h4>
+									<div class="form-group row">
+										<div class="col-xs-3"><i class="fas fa-shopping-bag fa-4x"></i></div>
+										<div class="col-xs-6" style="padding-top: 15px;">
+											<input type="text" id="totalBag" class="form-control" value="0">
+										</div>
+										<div class="col-xs-3">
+											<a class="btn btn-primary btn-sm" href="#"><i class="fas fa-plus"></i></a><br/>
+											<a class="btn btn-default btn-sm" href="#" style="margin-top: 5px;"><i class="fas fa-minus"></i></a>
+										</div>
+									</div>
+									<h4>Total Bag Weight:</h4>
+									<div class="form-group row">
+										<div class="col-xs-3"><i class="fas fa-weight fa-4x"></i></div>
+										<div class="col-xs-6" style="padding-top: 15px;">
+											<input type="text" id="totalBag" class="form-control" value="0">
+										</div>
+										<div class="col-xs-3">
+											<a class="btn btn-primary btn-sm" href="#"><i class="fas fa-plus"></i></a><br/>
+											<a class="btn btn-default btn-sm" href="#" style="margin-top: 5px;"><i class="fas fa-minus"></i></a>
+										</div>
+									</div>
 								</div>
-								<div class="form-group">
-									<label>Total Weight</label>
-									<input type="text" class="form-control" placeholder="kg">
-								</div>
+							
 								
 							</div>
 							<div class="col-sm-6">
-								<div class="row">
+								<div class="container">
+									<h4>Type of Services:</h4>
+									<div class="form-group row">
+										<div class="col-xs-4 text-center">
+											<div class="row">
+												<div class="col-xs-12">
+													<label for="normalWash" class="fas fa-tshirt fa-4x"></labels>
+												</div>
+												<div class="col-xs-12">
+													<input type="checkbox" id="normalWash" name="services" class="from-control">
+												</div>
+												
+												
+											</div>
+											
+										</div>
+										<div class="col-xs-4 text-center">
+											<div class="row">
+												<div class="col-xs-12">
+													<label for="dryCleaningWash" class="fas fa-tshirt fa-4x"></labels>
+												</div>
+												<div class="col-xs-12">
+													<input type="checkbox" id="dryCleaningWash" name="services" class="from-control">
+												</div>
+												
+												
+											</div>
+										</div>
+										<div class="col-xs-4 text-center">
+											<div class="row">
+												<div class="col-xs-12">
+													<label for="curtainWash" class="fas fa-tshirt fa-4x"></labels>
+												</div>
+												<div class="col-xs-12">
+													<input type="checkbox" id="curtainWash" name="services" class="from-control">
+												</div>
+												
+												
+											</div>
+										</div>
+									
+										
+									</div>
+								</div>
+								
+							</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">Pickup Information</div>
+					<div class="panel-body">
+							<div class="row">
+
+								<div class="col-sm-6">
+
+									<div class="form-group">
+										<label for="">Please enter pickup & dropoff address:</label>
+									</div>
+									<div class="form-group">
+										<label>Pickup Address</label>
+										<input type="textbox" class="form-control" placeholder="Pickup Address" name="add_1" value="" id="autocomplete">
+									</div>
+									<div class="form-group">
+										<label>Dropoff Address</label>
+										<input type="textbox" class="form-control" placeholder="Dropoff Address (Optional)" name="add_2" id="autocomplete2">
+										<small>Leave empty if the address is the same.</small>
+									</div>
+									<div class="form-group">
+      							<input id="geocode" class="btn btn-primary" type="button" value="Set Pickup Point">
+									</div>
+									
+									
+								</div>
+								<div class="col-sm-6">
+									<label for="map-new">Select Pickup Point:</label>
+									
+										<div id="map-new"></div>
+
+									
+									
+									
+								</div>
+								<div class="col-sm-6">
+								<!--	<div class="row">
 								<div class="form-group col-xs-6">
 									<label>Pickup Time</label>
 									<input type="time" class="form-control">
@@ -79,40 +178,9 @@
 									<label>Dropoff Date</label>
 									<input type="date" class="form-control">
 								</div>
-								</div>
-								
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<hr>
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="card">
-					<h3 class="card-header">Pickup Information</h3>
-					<div class="card-body">
-							<div class="row">
+								</div>-->
 
-								<div class="col-sm-6">
 
-									<div class="form-group">
-										<label for="">Please enter pickup & dropoff address:</label>
-									</div>
-									<div class="form-group">
-										<label>Pickup Address</label>
-										<input type="textbox" class="form-control" placeholder="Pickup Address" name="add_1" value="" id="autocomplete">
-									</div>
-									<div class="form-group">
-										<label>Dropoff Address</label>
-										<input type="textbox" class="form-control" placeholder="Dropoff Address (Optional)" name="add_2" id="autocomplete2">
-										<small>Leave empty if the address is the same.</small>
-									</div>
-									<!--<div class="form-group">
-      							<input id="submit" class="btn btn-primary" type="button" value="Geocode">
-									</div>-->
-									<hr/>
 									<div class="from-group">
 										<input type="hidden" class="form-control" id="lat_pickup">
 										<input type="hidden" class="form-control" id="lng_pickup">
@@ -122,25 +190,19 @@
 										<input type="submit" class="btn btn-primary js-scroll-trigger" value="Next">
 
 									</div>
-								</div>
-								<div class="col-sm-6">
-									<label for="map-new">Select Pickup Point:</label>
-									
-										<div id="map-new"></div>
-
-									
-									
 									
 								</div>
 
 							</div>
-						</form>
+						
 
 					</div>
 				</div>
 			</div>
 		</div>
+		</div><!-- container end -->
 	</div>
+	</form>
 </header>
 
 
@@ -184,6 +246,11 @@
 <script src="../js/new-age.min.js"></script>
 
 <script>
+
+	$(document).ready(function(){
+		$().button('toggle');
+	});
+
 function initialize(){
 	initAutocomplete();
 	initAutocomplete2();
@@ -369,11 +436,11 @@ function initMap() {
 				//	geocodeAddress2(geocoder, map);
         //});
 
-				document.getElementById('autocomplete').addEventListener('change', function(){
+				document.getElementById('geocode').addEventListener('click', function(){
 					deleteMarkers();
           geocodeAddress(geocoder, map);
-				});
-				document.getElementById('autocomplete2').addEventListener('change', function(){
+				//});
+				//document.getElementById('autocomplete2').addEventListener('change', function(){
 					deleteMarkers2();
 					geocodeAddress2(geocoder, map);
 				});

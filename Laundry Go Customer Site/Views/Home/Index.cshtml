@@ -2,173 +2,217 @@
     ViewData["Title"] = "Index";
 }
 
-<header class="masthead">
-    <div class="container h-100">
-        <div class="row h-100">
 
-            <div class="col-lg-6 my-auto text-light">
-                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h2>
-            </div>
-            <div class="col-lg-6 my-auto">
-                <div class="card bg-light text-dark" style="height:500px;opacity:1;">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Sign In</h5>
-                        <form  method="POST">
-													<div class="row">
-														<div class="col-lg-12">
-															<div class="from-group">
-																<input type="text" class="form-control" name="user_phone" placeholder="Phone Number">
-															</div>
-														</div>
-													</div>
-                            <br>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="from-group">
-                                        <input type="text" class="form-control" name="user_email" placeholder="Email"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-															<div class="col-lg-12">
-																<input type="submit" class="btn btn-primary btn-xl js-scroll-trigger" style="width: 100%;" value="Login | Register"/>
-																@*<button class="btn btn-primary btn-xl js-scroll-trigger" style="width: 100%;">Let's Get Started!</button>*@
-															</div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <a class="btn btn-block btn-xl btn-social btn-facebook" href="#">
-                                        <i class="fa fa-facebook"></i> Sign in with Facebook
-                                    </a>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    @*<a class="btn btn-block btn-xl btn-social btn-google-plus" href="#">
-                                        <i class="fa fa-google-plus"></i> Sign in with Google
-                                    </a>*@
-																	<button class="btn btn-block btn-xl btn-social btn-google-plus" type="button" onclick="location.href='@Url.Action("GoogleClick", "Home")'"><i class="fa fa-google-plus"></i>Sign in with Google</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
 
+ <div class="page-header header-filter" data-parallax="true" style="background-image: url('../img/laundry1.jpeg')">
+    <div class="container home-top-container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1 class="title">Your Story Starts With Us.</h1>
+          <h4>Every landing page needs a small description after the big bold title, that&apos;s why we added this text here. Add here all the information that can make you or your product create the first impression.</h4>
+          <br>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn btn-danger btn-raised btn-lg">
+            <i class="fa fa-play"></i> Watch video
+          </a>
         </div>
+        <div class="col-md-6">
+            <div class="card card-login">
+            <form class="form" method="post">
+              <div class="card-header card-header-primary text-center">
+                <h4 class="card-title">Login</h4>
+                <div class="social-line">
+                  <a href="#pablo" class="btn btn-just-icon btn-link">
+                    <i class="fa fa-facebook-square"></i>
+                  </a>
+                    
+                    <button class="btn btn-just-icon btn-link" type="button" onclick="location.href='@Url.Action("GoogleClick", "Home")'"><i class="fa fa-google-plus"></i></button>
+                  
+                </div>
+              </div>
+              <p class="description text-center">Or Be Classical</p>
+              <div class="card-body">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="material-icons">face</i>
+                    </span>
+                  </div>
+                  <input type="text" class="form-control" name="user_phone" placeholder="Phone Number">
+                </div>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="material-icons">mail</i>
+                    </span>
+                  </div>
+                  <input type="email" class="form-control" name="user_email" placeholder="Email"/>
+                </div>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="material-icons">lock_outline</i>
+                    </span>
+                  </div>
+                  <input type="password" class="form-control" placeholder="Password...">
+                </div>
+              </div>
+              <div class="footer text-center">
+                <input type="submit" class="btn btn-primary btn-link btn-wd btn-lg" style="width: 100%;" value="Get Started"/>
+                <!-- <a href="#pablo" class="btn btn-primary btn-link btn-wd btn-lg">Get Started</a> -->
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
-</header>
-<section class="download bg-primary text-center" id="download">
+  </div>
+  <div class="main main-raised">
     <div class="container">
+      <div class="section text-center">
         <div class="row">
-            <div class="col-md-8 mx-auto">
-                <h2 class="section-heading">Discover what all the buzz is about!</h2>
-                <p>Our app is available on any mobile device! Download now to get started!</p>
-                <div class="badges">
-                    <a class="badge-link" href="#"><img src="img/google-play-badge.svg" alt=""></a>
-                    <a class="badge-link" href="#"><img src="img/app-store-badge.svg" alt=""></a>
+          <div class="col-md-8 ml-auto mr-auto">
+            <h2 class="title">Let&apos;s talk product</h2>
+            <h5 class="description">This is the paragraph where you can write more details about your product. Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious, otherwise he wouldn&apos;t scroll to get here. Add a button if you want the user to see more.</h5>
+          </div>
+        </div>
+        <div class="features">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="info">
+                <div class="icon icon-info">
+                  <i class="material-icons">chat</i>
                 </div>
+                <h4 class="info-title">Free Chat</h4>
+                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+              </div>
             </div>
+            <div class="col-md-4">
+              <div class="info">
+                <div class="icon icon-success">
+                  <i class="material-icons">verified_user</i>
+                </div>
+                <h4 class="info-title">Verified Users</h4>
+                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="info">
+                <div class="icon icon-danger">
+                  <i class="material-icons">fingerprint</i>
+                </div>
+                <h4 class="info-title">Fingerprint</h4>
+                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-</section>
-<section class="features" id="features">
-    <div class="container">
-        <div class="section-heading text-center">
-            <h2>Unlimited Features, Unlimited Fun</h2>
-            <p class="text-muted">Check out what you can do with this app theme!</p>
-            <hr>
+      </div>
+      <!-- <div class="section text-center">
+        <h2 class="title">Here is our team</h2>
+        <div class="team">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="team-player">
+                <div class="card card-plain">
+                  <div class="col-md-6 ml-auto mr-auto">
+                    <img src="../assets/img/faces/avatar.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                  </div>
+                  <h4 class="card-title">Gigi Hadid
+                    <br>
+                    <small class="card-description text-muted">Model</small>
+                  </h4>
+                  <div class="card-body">
+                    <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
+                      <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                  </div>
+                  <div class="card-footer justify-content-center">
+                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
+                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-instagram"></i></a>
+                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-facebook-square"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="team-player">
+                <div class="card card-plain">
+                  <div class="col-md-6 ml-auto mr-auto">
+                    <img src="../assets/img/faces/christian.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                  </div>
+                  <h4 class="card-title">Christian Louboutin
+                    <br>
+                    <small class="card-description text-muted">Designer</small>
+                  </h4>
+                  <div class="card-body">
+                    <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
+                      <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                  </div>
+                  <div class="card-footer justify-content-center">
+                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
+                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="team-player">
+                <div class="card card-plain">
+                  <div class="col-md-6 ml-auto mr-auto">
+                    <img src="../assets/img/faces/kendall.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                  </div>
+                  <h4 class="card-title">Kendall Jenner
+                    <br>
+                    <small class="card-description text-muted">Model</small>
+                  </h4>
+                  <div class="card-body">
+                    <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
+                      <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                  </div>
+                  <div class="card-footer justify-content-center">
+                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
+                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-instagram"></i></a>
+                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-facebook-square"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div> -->
+      <div class="section section-contacts">
         <div class="row">
-            <div class="col-lg-4 my-auto">
-                <div class="device-container">
-                    <div class="device-mockup iphone6_plus portrait white">
-                        <div class="device">
-                            <div class="screen">
-                                <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                                <img src="img/Screen Shot 2018-06-29 at 10.35.35 AM.png" class="img-fluid" style="width:100%" alt="">
-                            </div>
-                            <div class="button">
-                                <!-- You can hook the "home button" to some JavaScript events or just remove it -->
-                            </div>
-                        </div>
-                    </div>
+          <div class="col-md-8 ml-auto mr-auto">
+            <h2 class="text-center title">Work with us</h2>
+            <h4 class="text-center description">Divide details about your product or agency work into parts. Write a few lines about each one and contact us about any further collaboration. We will responde get back to you in a couple of hours.</h4>
+            <form class="contact-form">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Your Name</label>
+                    <input type="email" class="form-control">
+                  </div>
                 </div>
-            </div>
-            <div class="col-lg-8 my-auto">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="feature-item">
-                                <i class="icon-screen-smartphone text-primary"></i>
-                                <h3>Device Mockups</h3>
-                                <p class="text-muted">Ready to use HTML/CSS device mockups, no Photoshop required!</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="feature-item">
-                                <i class="icon-camera text-primary"></i>
-                                <h3>Flexible Use</h3>
-                                <p class="text-muted">Put an image, video, animation, or anything else in the screen!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="feature-item">
-                                <i class="icon-present text-primary"></i>
-                                <h3>Free to Use</h3>
-                                <p class="text-muted">As always, this theme is free to download and use for any purpose!</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="feature-item">
-                                <i class="icon-lock-open text-primary"></i>
-                                <h3>Open Source</h3>
-                                <p class="text-muted">Since this theme is MIT licensed, you can use it commercially!</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Your Email</label>
+                    <input type="email" class="form-control">
+                  </div>
                 </div>
-            </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleMessage" class="bmd-label-floating">Your Message</label>
+                <textarea type="email" class="form-control" rows="4" id="exampleMessage"></textarea>
+              </div>
+              <div class="row">
+                <div class="col-md-4 ml-auto mr-auto text-center">
+                  <button class="btn btn-primary btn-raised">
+                    Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
-</section>
-<section class="cta">
-    <div class="cta-content">
-        <div class="container">
-            <h2>Stop waiting.<br>Start building.</h2>
-            <a href="#contact" class="btn btn-outline btn-xl js-scroll-trigger">Let's Get Started!</a>
-        </div>
-    </div>
-    <div class="overlay"></div>
-</section>
-<section class="contact bg-primary" id="contact">
-    <div class="container">
-        <h2>
-            We
-            <i class="fa fa-heart"></i>
-            new friends!
-        </h2>
-        <ul class="list-inline list-social">
-            <li class="list-inline-item social-twitter">
-                <a href="#">
-                    <i class="fa fa-twitter"></i>
-                </a>
-            </li>
-            <li class="list-inline-item social-facebook">
-                <a href="#">
-                    <i class="fa fa-facebook"></i>
-                </a>
-            </li>
-            <li class="list-inline-item social-google-plus">
-                <a href="#">
-                    <i class="fa fa-google-plus"></i>
-                </a>
-            </li>
-        </ul>
-    </div>
-</section>
+  </div>
