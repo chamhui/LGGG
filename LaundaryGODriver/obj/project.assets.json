@@ -11498,7 +11498,7 @@
       ]
     },
     "System.Security.Cryptography.Xml/4.4.2": {
-      "sha512": "q9Dren/YP5jhRCkDvLfuaPpMTQzP97ANvzq/OoGgwK8YdLRSTABS9oW5/23OKoM2DRCuBrh4qaecD2YNhPtuzQ==",
+      "sha512": "1m+fKVrApgKYMRuE0MF0vGjqy4XqAp1rCtyAzMXhJajMDDytMh/rHk9hp4M7KKk3QQZoWJUvyUY7xcw74w+JiQ==",
       "type": "package",
       "path": "system.security.cryptography.xml/4.4.2",
       "files": [
@@ -12684,23 +12684,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LENOVO\\.nuget\\packages\\": {},
+    "C:\\Users\\Syahrin Seth\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\Github\\LaundryGo\\LaundaryGODriver\\LaundryGoDriver.csproj",
+      "projectUniqueName": "C:\\Users\\Syahrin Seth\\LGGG\\LaundaryGODriver\\LaundryGoDriver.csproj",
       "projectName": "LaundryGoDriver",
-      "projectPath": "C:\\Users\\LENOVO\\Desktop\\Github\\LaundryGo\\LaundaryGODriver\\LaundryGoDriver.csproj",
-      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LENOVO\\Desktop\\Github\\LaundryGo\\LaundaryGODriver\\obj\\",
+      "projectPath": "C:\\Users\\Syahrin Seth\\LGGG\\LaundaryGODriver\\LaundryGoDriver.csproj",
+      "packagesPath": "C:\\Users\\Syahrin Seth\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Syahrin Seth\\LGGG\\LaundaryGODriver\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Syahrin Seth\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -13229,23 +13229,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LENOVO\\.nuget\\packages\\": {},
+    "C:\\Users\\Syahrin Seth\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\Github\\LaundryGo\\Laundry Go Customer Site\\Laundry Go Customer Site.csproj",
+      "projectUniqueName": "C:\\Users\\Syahrin Seth\\LGGG\\Laundry Go Customer Site\\Laundry Go Customer Site.csproj",
       "projectName": "Laundry Go Customer Site",
-      "projectPath": "C:\\Users\\LENOVO\\Desktop\\Github\\LaundryGo\\Laundry Go Customer Site\\Laundry Go Customer Site.csproj",
-      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LENOVO\\Desktop\\Github\\LaundryGo\\Laundry Go Customer Site\\obj\\",
+      "projectPath": "C:\\Users\\Syahrin Seth\\LGGG\\Laundry Go Customer Site\\Laundry Go Customer Site.csproj",
+      "packagesPath": "C:\\Users\\Syahrin Seth\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Syahrin Seth\\LGGG\\Laundry Go Customer Site\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Syahrin Seth\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

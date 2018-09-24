@@ -27,128 +27,152 @@
 		}
 	</style>
 }
-<br>
-<header class="masthead">
-	<div class="container">
-		<form method="POST" role="form">
-		<div class="row">
-			<div class="col-sm-12">
-				<h1>Place Order</h1>
-				<div class="panel panel-default">
-					<div class="panel-heading"> Laundry Information</div>
-					<div class="panel-body">
-						<div class="row">
-							<div class="col-sm-6">
-								<div class="container">
-									<h4>Bag Quantity:</h4>
-									<div class="form-group row">
-										<div class="col-xs-3"><i class="fas fa-shopping-bag fa-4x"></i></div>
-										<div class="col-xs-6" style="padding-top: 15px;">
-											<input type="text" id="totalBag" class="form-control" value="0">
-										</div>
-										<div class="col-xs-3">
-											<a class="btn btn-primary btn-sm" href="#"><i class="fas fa-plus"></i></a><br/>
-											<a class="btn btn-default btn-sm" href="#" style="margin-top: 5px;"><i class="fas fa-minus"></i></a>
-										</div>
-									</div>
-									<h4>Total Bag Weight:</h4>
-									<div class="form-group row">
-										<div class="col-xs-3"><i class="fas fa-weight fa-4x"></i></div>
-										<div class="col-xs-6" style="padding-top: 15px;">
-											<input type="text" id="totalBag" class="form-control" value="0">
-										</div>
-										<div class="col-xs-3">
-											<a class="btn btn-primary btn-sm" href="#"><i class="fas fa-plus"></i></a><br/>
-											<a class="btn btn-default btn-sm" href="#" style="margin-top: 5px;"><i class="fas fa-minus"></i></a>
-										</div>
-									</div>
-								</div>
-							
-								
-							</div>
-							<div class="col-sm-6">
-								<div class="container">
-									<h4>Type of Services:</h4>
-									<div class="form-group row">
-										<div class="col-xs-4 text-center">
-											<div class="row">
-												<div class="col-xs-12">
-													<label for="normalWash" class="fas fa-tshirt fa-4x"></labels>
-												</div>
-												<div class="col-xs-12">
-													<input type="checkbox" id="normalWash" name="services" class="from-control">
-												</div>
-												
-												
-											</div>
-											
-										</div>
-										<div class="col-xs-4 text-center">
-											<div class="row">
-												<div class="col-xs-12">
-													<label for="dryCleaningWash" class="fas fa-tshirt fa-4x"></labels>
-												</div>
-												<div class="col-xs-12">
-													<input type="checkbox" id="dryCleaningWash" name="services" class="from-control">
-												</div>
-												
-												
-											</div>
-										</div>
-										<div class="col-xs-4 text-center">
-											<div class="row">
-												<div class="col-xs-12">
-													<label for="curtainWash" class="fas fa-tshirt fa-4x"></labels>
-												</div>
-												<div class="col-xs-12">
-													<input type="checkbox" id="curtainWash" name="services" class="from-control">
-												</div>
-												
-												
-											</div>
-										</div>
-									
-										
-									</div>
-								</div>
-								
-							</div>
-								
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 
-		
-		
+    <div class="container" style="margin-top:100px">
+      <div class="row">
+        <div class="col-12 ml-auto mr-auto">
+						<h1>Place Order</h1>
+						<br>
+      				<div class="card">
+          			<div class="card-header card-header-icon card-header-danger">
+            			<div class="card-icon">
+              			<h2><i class="material-icons">language</i> 
+										Laundry Information</h2>
+            			</div>
+          			</div>
+         				 <div class="card-body">
+              		<h4 class="card-title">Laundry Information</h4>
+                  
+									<div class="container">
+									<div class="row">
+									<div class="col-4">
+										<h4>Bag Quantity:</h4>
+									<div class="form-group row">
+										<div class="col-xs-3"><i class="fas fa-shopping-bag fa-4x text-info"></i></div>
+										<div class="col-xs-6" style="padding: 15px;">
+											<input type="text" id="totalBag" class="form-control" value="0">
+										</div>
+										<div class="col-xs-3">
+											<button class="btn btn-info btn-sm" id="bagPlus"><i class="fas fa-plus"></i></button><br/>
+											<button class="btn btn-default btn-sm" id="bagMinus" style="margin-top: 5px;"><i class="fas fa-minus"></i></button>
+										</div>
+									</div>
+									<h4>Total Bag Weight (KG):</h4>
+									<div class="form-group row">
+										<div class="col-xs-3"><i class="fas fa-weight fa-4x text-info"></i></div>
+										<div class="col-xs-6" style="padding: 15px;">
+											<input type="text" id="totalWeight" class="form-control" value="0">
+										</div>
+										<div class="col-xs-3">
+											<button class="btn btn-info btn-sm" id="weightPlus"><i class="fas fa-plus"></i></button><br/>
+											<button class="btn btn-default btn-sm" id="weightMinus" style="margin-top: 5px;"><i class="fas fa-minus"></i></button>
+										</div>
+									</div>
+									</div>
+									<!-- end col 6 -->
+									<div class="col-8">
+										<h4>Type of Services:</h4>
+										<div class="row">
+											<div class="col-4">
+												<div class="form-check">
+               				 		<label class="form-check-label">
+                 		 				<input class="form-check-input" type="checkbox" name="wash" value="" checked> Wash
+                  					<span class="form-check-sign">
+                    					<span class="check"></span>
+                  					</span>
+                					</label>
+              					</div>
+											</div>
+											<div class="col-4">
+												<div class="form-check">
+               				 		<label class="form-check-label">
+                 		 				<input class="form-check-input" type="checkbox" name="dry_cleaning" value=""> Dry Cleaning
+                  					<span class="form-check-sign">
+                    					<span class="check"></span>
+                  					</span>
+                					</label>
+              					</div>
+											</div>
+											<div class="col-4">
+												<div class="form-check">
+               				 		<label class="form-check-label">
+                 		 				<input class="form-check-input" type="checkbox" name="curtain" value=""> Curtain
+                  					<span class="form-check-sign">
+                    					<span class="check"></span>
+                  					</span>
+                					</label>
+              					</div>
+											</div>
+											<div class="col-4">
+												<div class="form-check">
+               				 		<label class="form-check-label">
+                 		 				<input class="form-check-input" type="checkbox" name="other" value=""> Other
+                  					<span class="form-check-sign">
+                    					<span class="check"></span>
+                  					</span>
+                					</label>
+              					</div>
+											</div>
+										</div>
+									</div> 
+									<!-- end col 6 -->
+
+
+									
+								</div>
+	</div>
+								
+
+          			</div>
+      				</div>
+
+
+							
+  					
+      </div>
+    </div>
+		</div>
+<br>
+<div class="container">
+	<div class="row">
+		<div class="card">
+			<div class="card-header card-header-icon card-header-warning">
+            			<div class="card-icon">
+              			<h2><i class="material-icons">
+local_shipping
+</i>
+										Pickup Information</h2>
+            			</div>
+          			</div>
+  <div class="card-body">
+    <h4 class="card-title">Place Order</h4>
+
 		<div class="row">
-			<div class="col-lg-12">
-				<div class="panel panel-default">
-					<div class="panel-heading">Pickup Information</div>
-					<div class="panel-body">
+			<div class="col-12">
+					<div class="container">
 							<div class="row">
 
 								<div class="col-sm-6">
 
 									<div class="form-group">
-										<label for="">Please enter pickup & dropoff address:</label>
+										<!-- <label for="">Please enter pickup & dropoff address:</label> -->
 									</div>
 									<div class="form-group">
 										<label>Pickup Address</label>
-										<input type="textbox" class="form-control" placeholder="Pickup Address" name="add_1" value="" id="autocomplete">
+										<input type="textbox" class="form-control" placeholder="" name="add_1" value="" id="autocomplete">
 									</div>
 									<div class="form-group">
-										<label>Dropoff Address</label>
-										<input type="textbox" class="form-control" placeholder="Dropoff Address (Optional)" name="add_2" id="autocomplete2">
+										<label>Dropoff Address (Optional)</label>
+										<input type="textbox" class="form-control" placeholder="" name="add_2" id="autocomplete2">
 										<small>Leave empty if the address is the same.</small>
 									</div>
 									<div class="form-group">
-      							<input id="geocode" class="btn btn-primary" type="button" value="Set Pickup Point">
+      							<input id="geocode" class="btn btn-info" type="button" value="Set Pickup Point">
 									</div>
 									
 									
 								</div>
+								<!-- end col sm 6 -->
 								<div class="col-sm-6">
 									<label for="map-new">Select Pickup Point:</label>
 									
@@ -186,8 +210,7 @@
 										<input type="hidden" class="form-control" id="lng_pickup">
 										<input type="hidden" class="form-control" id="lat_dropoff">
 										<input type="hidden" class="form-control" id="lng_dropoff">
-										<button type="reset" class="btn btn-default js-scroll-trigger">Reset</button>
-										<input type="submit" class="btn btn-primary js-scroll-trigger" value="Next">
+										
 
 									</div>
 									
@@ -195,48 +218,30 @@
 
 							</div>
 						
+</div>
+</div>
 
-					</div>
-				</div>
-			</div>
+
 		</div>
-		</div><!-- container end -->
+		<!-- end panel new -->
+  </div>
+</div>
+
+
+<button type="reset" class="btn btn-default js-scroll-trigger">Reset</button>
+<input type="submit" class="btn btn-info js-scroll-trigger" value="Next">
 	</div>
-	</form>
-</header>
+</div>
+	
 
 
 
 
-
-
-
-
-
-<footer>
-	<div class="container">
-		<p>&copy; Laundry Go 2018. All Rights Reserved.</p>
-		<ul class="list-inline">
-			<li class="list-inline-item">
-				<a href="#">Privacy</a>
-			</li>
-			<li class="list-inline-item">
-				<a href="#">Terms</a>
-			</li>
-			<li class="list-inline-item">
-				<a href="#">FAQ</a>
-			</li>
-		</ul>
-	</div>
-</footer>
-
-
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkY_x9vsdgETaBOAlvw8eJANTiuWGy7Xs&libraries=places&callback=initialize" async
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkY_x9vsdgETaBOAlvw8eJANTiuWGy7Xs&libraries=places" async
 				defer></script>
 
 <!-- Bootstrap core JavaScript -->
-<script src="../vendor/jquery/jquery.min.js"></script>
+<script src="../assets/js/core/jquery.min.js" type="text/javascript"></script>
 <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Plugin JavaScript -->
@@ -249,13 +254,15 @@
 
 	$(document).ready(function(){
 		$().button('toggle');
-	});
+	
 
 function initialize(){
 	initAutocomplete();
 	initAutocomplete2();
 	initMap();
 }
+
+google.maps.event.addDomListener(window, 'load', initialize);
 	// get user locations
 	var position;
 	var markers = [];
@@ -264,7 +271,7 @@ function initialize(){
 
 	function getLocation() {
 		if (navigator.geolocation) {
-		//	navigator.geolocation.getCurrentPosition(showPosition);
+			// navigator.geolocation.getCurrentPosition(showPosition);
 		} else {
 			x.innerHTML = "Geolocation is not supported by this browser.";
 		}
@@ -315,7 +322,6 @@ function initAutocomplete() {
   autocomplete = new google.maps.places.Autocomplete(
       /** type {!HTMLInputElement} */(document.getElementById('autocomplete')),
       {types: ['geocode']});
-
   // When the user selects an address from the dropdown, populate the address
   // fields in the form.
   autocomplete.addListener('place_changed', fillInAddress);
@@ -324,7 +330,6 @@ function initAutocomplete() {
 function fillInAddress() {
   // Get the place details from the autocomplete object.
   var place = autocomplete.getPlace();
-
   for (var component in componentForm) {
     document.getElementById(component).value = '';
     document.getElementById(component).disabled = false;
@@ -558,8 +563,39 @@ function initMap() {
         markers2 = [];
       }
 
+var totalWeight = 0;
+var totalBag = 0;
 
+	$('#totalWeight').attr('value', totalWeight);
+	$('#totalBag').attr('value', totalBag);
+	// total weight click plus
+	$('#weightPlus').click(function(){
+		totalWeight++;
+		$('#totalWeight').attr('value', totalWeight);
+	});
 
+	// total weight click minus
+	$('#weightMinus').click(function(){
+		if(totalWeight > 0){
+			totalWeight--;
+			$('#totalWeight').attr('value', totalWeight);
+		}
+	});
+
+	// total bag click plus
+	$('#bagPlus').click(function(){
+			totalBag++;
+			$('#totalBag').attr('value', totalBag);
+	});
+
+	// total bag click minus
+	$('#bagMinus').click(function(){
+		if(totalBag > 0){
+			totalBag--;
+			$('#totalBag').attr('value', totalBag);
+		}
+	});
+});
 </script>
 
 
