@@ -25,6 +25,33 @@
 		.container{
 			width:100%;
 		}
+
+
+		.icon-with-buttons {
+			padding: 5%;
+		}
+		.icon-with-buttons .icon-icon {
+			text-align: center;
+		}
+
+		.icon-with-buttons .icon-input {
+			padding-left: 20%;
+			padding-right: 20%;
+		}
+		.icon-with-buttons .icon-input input {
+			text-align: center;
+		}
+		.icon-with-buttons .icon-button button {
+  		justify-content: center;
+			text-align: center;
+		}
+		.icon-with-buttons .icon-button {
+			width: 100%;
+  		display: flex;
+  		align-items: center;
+  		justify-content: center;
+		}
+		
 	</style>
 }
 
@@ -71,12 +98,77 @@
 									</div>
 									<!-- end col 6 -->
 									<div class="col-md-8">
+										<h4>Type of Cloth:</h4>
+										<div class="row">
+											<div class="col-md-3">
+												<div class="icon-with-buttons">
+													<div class="icon-icon">
+														<i class="fas fa-weight fa-4x text-info"></i>
+													</div>
+													<div class="icon-input">
+														<input type="text" id="shirt" class="form-control" value="0">
+													</div>
+													<div class="icon-button">
+														<button class="btn btn-default btn-sm" id="" style="margin-top: 5px;"><i class="fas fa-minus"></i></button>
+														<button class="btn btn-info btn-sm" id=""><i class="fas fa-plus"></i></button>
+													</div>
+												</div>
+											</div>
+											<!-- end col md 3 -->
+											<div class="col-md-3">
+												<div class="icon-with-buttons">
+													<div class="icon-icon">
+														<i class="fas fa-weight fa-4x text-info"></i>
+													</div>
+													<div class="icon-input">
+														<input type="text" id="shirt" class="form-control" value="0">
+													</div>
+													<div class="icon-button">
+														<button class="btn btn-default btn-sm" id="" style="margin-top: 5px;"><i class="fas fa-minus"></i></button>
+														<button class="btn btn-info btn-sm" id=""><i class="fas fa-plus"></i></button>
+													</div>
+												</div>
+											</div>
+											<!-- end col md 3 -->
+											<div class="col-md-3">
+												<div class="icon-with-buttons">
+													<div class="icon-icon">
+														<i class="fas fa-weight fa-4x text-info"></i>
+													</div>
+													<div class="icon-input">
+														<input type="text" id="shirt" class="form-control" value="0">
+													</div>
+													<div class="icon-button">
+														<button class="btn btn-default btn-sm" id="" style="margin-top: 5px;"><i class="fas fa-minus"></i></button>
+														<button class="btn btn-info btn-sm" id=""><i class="fas fa-plus"></i></button>
+													</div>
+												</div>
+											</div>
+											<!-- end col md 3 -->
+											<div class="col-md-3">
+												<div class="icon-with-buttons">
+													<div class="icon-icon">
+														<i class="fas fa-weight fa-4x text-info"></i>
+													</div>
+													<div class="icon-input">
+														<input type="text" id="shirt" class="form-control" value="0">
+													</div>
+													<div class="icon-button">
+														<button class="btn btn-default btn-sm" id="" style="margin-top: 5px;"><i class="fas fa-minus"></i></button>
+														<button class="btn btn-info btn-sm" id=""><i class="fas fa-plus"></i></button>
+													</div>
+												</div>
+											</div>
+											<!-- end col md 3 -->
+
+										</div>
+										<!-- end row -->
 										<h4>Type of Services:</h4>
 										<div class="row">
 											<div class="col-md-4">
 												<div class="form-check">
                				 		<label class="form-check-label">
-                 		 				<input class="form-check-input" type="checkbox" name="wash" value="" checked> Wash
+                 		 				<input class="form-check-input" type="radio" name="type_of_services" value="" checked> Wash
                   					<span class="form-check-sign">
                     					<span class="check"></span>
                   					</span>
@@ -86,7 +178,7 @@
 											<div class="col-md-4">
 												<div class="form-check">
                				 		<label class="form-check-label">
-                 		 				<input class="form-check-input" type="checkbox" name="dry_cleaning" value=""> Dry Cleaning
+                 		 				<input class="form-check-input" type="radio" name="type_of_services" value=""> Dry Cleaning
                   					<span class="form-check-sign">
                     					<span class="check"></span>
                   					</span>
@@ -96,7 +188,7 @@
 											<div class="col-md-4">
 												<div class="form-check">
                				 		<label class="form-check-label">
-                 		 				<input class="form-check-input" type="checkbox" name="curtain" value=""> Curtain
+                 		 				<input class="form-check-input" type="radio" name="type_of_services" value=""> Curtain
                   					<span class="form-check-sign">
                     					<span class="check"></span>
                   					</span>
@@ -106,7 +198,7 @@
 											<div class="col-md-4">
 												<div class="form-check">
                				 		<label class="form-check-label">
-                 		 				<input class="form-check-input" type="checkbox" name="other" value=""> Other
+                 		 				<input class="form-check-input" type="radio" name="type_of_services" value=""> Other
                   					<span class="form-check-sign">
                     					<span class="check"></span>
                   					</span>
@@ -114,6 +206,7 @@
               					</div>
 											</div>
 										</div>
+										<!-- end row -->
 									</div> 
 									<!-- end col 6 -->
 
@@ -252,269 +345,196 @@ local_shipping
 
 <script>
 
-	$(document).ready(function(){
-		$().button('toggle');
-	
-
+$(document).ready(function(){
+	$().button('toggle');
+	// google map
+google.maps.event.addDomListener(window, 'load', initialize);
 function initialize(){
-	initAutocomplete();
-	initAutocomplete2();
-	initMap();
+		initAutocomplete();
+		initAutocomplete2();
+		initMap();
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+	
 	// get user locations
 	var position;
 	var markers = [];
 	var markers2 = [];
-	getLocation();
-
-	function getLocation() {
-		if (navigator.geolocation) {
-			// navigator.geolocation.getCurrentPosition(showPosition);
-		} else {
-			x.innerHTML = "Geolocation is not supported by this browser.";
-		}
-	}
+	
 	var map;
 	var marker;
-	function showPosition(position) {
-		position = {
-			lng: position.coords.longitude,
-			lat: position.coords.latitude
+	// address autocomlete
+	var placeSearch, autocomplete;
+	var componentForm = {
+  	street_number: 'short_name',
+  	route: 'long_name',
+  	locality: 'long_name',
+  	administrative_area_level_1: 'short_name',
+  	country: 'long_name',
+  	postal_code: 'short_name'
+	};
+
+	function initAutocomplete() {
+  	// Create the autocomplete object, restricting the search to geographical
+  	// location types.
+  	autocomplete = new google.maps.places.Autocomplete(
+      /** type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+      {types: ['geocode']
+		});
+  	// When the user selects an address from the dropdown, populate the address
+  	// fields in the form.
+  	autocomplete.addListener('place_changed', fillInAddress);
 		}
-		map = new google.maps.Map(document.getElementById('map-new'), {
-			center: { lat: position.lat, lng: position.lng },
-			zoom: 17
-		});
-		marker = new google.maps.Marker({
-			position: { lat: position.lat, lng: position.lng },
-			map: map,
-			draggable: true
-		});
-		//document.getElementById("add_lat").value = position.lat;
-		//document.getElementById("add_long").value = position.lng;
-		google.maps.event.addListener(marker, 'dragend', function (event) {
 
+	function fillInAddress() {
+  	// Get the place details from the autocomplete object.
+ 		var place = autocomplete.getPlace();
+  	for (var component in componentForm) {
+    	document.getElementById(component).value = '';
+    	document.getElementById(component).disabled = false;
+  	}
 
-			document.getElementById("add_lat").value = event.latLng.lat();
-			document.getElementById("add_long").value = event.latLng.lng();
-		});
+  	// Get each component of the address from the place details
+  	// and fill the corresponding field on the form.
+  	for (var i = 0; i < place.address_components.length; i++) {
+    	var addressType = place.address_components[i].types[0];
+    	if (componentForm[addressType]) {
+      	var val = place.address_components[i][componentForm[addressType]];
+      	document.getElementById(addressType).value = val;
+    	}
+  	}
 	}
 
-			// google.maps.event.addDomListener(window, 'load', initialize());
 
+	// address autocomlete
+	var placeSearch2, autocomplete2;
+	var componentForm2 = {
+  	street_number2: 'short_name',
+  	route2: 'long_name',
+  	locality2: 'long_name',
+  	administrative_area_level_12: 'short_name',
+  	country2: 'long_name',
+  	postal_code2: 'short_name'
+	};
 
-// address autocomlete
-var placeSearch, autocomplete;
-var componentForm = {
-  street_number: 'short_name',
-  route: 'long_name',
-  locality: 'long_name',
-  administrative_area_level_1: 'short_name',
-  country: 'long_name',
-  postal_code: 'short_name'
-};
+	function initAutocomplete2() {
+  	// Create the autocomplete object, restricting the search to geographical
+  	// location types.
+  	autocomplete = new google.maps.places.Autocomplete(
+    	/** type {!HTMLInputElement} */(document.getElementById('autocomplete2')),
+    	{types: ['geocode']
+		});
+		// When the user selects an address from the dropdown, populate the address
+  	// fields in the form.
+  	autocomplete.addListener('place_changed', fillInAddress2);
+	}
 
-function initAutocomplete() {
-  // Create the autocomplete object, restricting the search to geographical
-  // location types.
-  autocomplete = new google.maps.places.Autocomplete(
-      /** type {!HTMLInputElement} */(document.getElementById('autocomplete')),
-      {types: ['geocode']});
-  // When the user selects an address from the dropdown, populate the address
-  // fields in the form.
-  autocomplete.addListener('place_changed', fillInAddress);
-}
+	function fillInAddress2() {
+  	// Get the place details from the autocomplete object.
+  	var place = autocomplete.getPlace();
 
-function fillInAddress() {
-  // Get the place details from the autocomplete object.
-  var place = autocomplete.getPlace();
-  for (var component in componentForm) {
-    document.getElementById(component).value = '';
-    document.getElementById(component).disabled = false;
-  }
+  	for (var component in componentForm) {
+    	document.getElementById(component).value = '';
+    	document.getElementById(component).disabled = false;
+  	}
 
-  // Get each component of the address from the place details
-  // and fill the corresponding field on the form.
-  for (var i = 0; i < place.address_components.length; i++) {
-    var addressType = place.address_components[i].types[0];
-    if (componentForm[addressType]) {
-      var val = place.address_components[i][componentForm[addressType]];
-      document.getElementById(addressType).value = val;
-    }
-  }
-}
+  	// Get each component of the address from the place details
+  	// and fill the corresponding field on the form.
+  	for (var i = 0; i < place.address_components.length; i++) {
+    	var addressType = place.address_components[i].types[0];
+    	if (componentForm[addressType]) {
+      	var val = place.address_components[i][componentForm[addressType]];
+      	document.getElementById(addressType).value = val;
+    	}
+  	}
+	}
 
-// Bias the autocomplete object to the user's geographical location,
-// as supplied by the browser's 'navigator.geolocation' object.
-function geolocate() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      var geolocation = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      };
-      var circle = new google.maps.Circle({
-        center: geolocation,
-        radius: position.coords.accuracy
-      });
-      autocomplete.setBounds(circle.getBounds());
+	
+
+	// Geolocation Function
+	function initMap() {
+    var map = new google.maps.Map(document.getElementById('map-new'), {
+      zoom: 8,
+      center: {lat: 3.519863,lng: 101.538116}
     });
-  }
-}
+		setMapOnAll(map);
+		setMapOnAll2(map);
+  	var geocoder = new google.maps.Geocoder();		
+			//  document.getElementById('submit').addEventListener('click', function() {
+			//	deleteMarkers();
+      // geocodeAddress(geocoder, map);
+			//	geocodeAddress2(geocoder, map);
+      //});
 
-// address autocomlete
-var placeSearch2, autocomplete2;
-var componentForm2 = {
-  street_number2: 'short_name',
-  route2: 'long_name',
-  locality2: 'long_name',
-  administrative_area_level_12: 'short_name',
-  country2: 'long_name',
-  postal_code2: 'short_name'
-};
-
-function initAutocomplete2() {
-  // Create the autocomplete object, restricting the search to geographical
-  // location types.
-  autocomplete = new google.maps.places.Autocomplete(
-      /** type {!HTMLInputElement} */(document.getElementById('autocomplete2')),
-      {types: ['geocode']});
-
-  // When the user selects an address from the dropdown, populate the address
-  // fields in the form.
-  autocomplete.addListener('place_changed', fillInAddress2);
-}
-
-function fillInAddress2() {
-  // Get the place details from the autocomplete object.
-  var place = autocomplete.getPlace();
-
-  for (var component in componentForm) {
-    document.getElementById(component).value = '';
-    document.getElementById(component).disabled = false;
-  }
-
-  // Get each component of the address from the place details
-  // and fill the corresponding field on the form.
-  for (var i = 0; i < place.address_components.length; i++) {
-    var addressType = place.address_components[i].types[0];
-    if (componentForm[addressType]) {
-      var val = place.address_components[i][componentForm[addressType]];
-      document.getElementById(addressType).value = val;
-    }
-  }
-}
-
-// Bias the autocomplete object to the user's geographical location,
-// as supplied by the browser's 'navigator.geolocation' object.
-function geolocate2() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      var geolocation = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      };
-      var circle = new google.maps.Circle({
-        center: geolocation,
-        radius: position.coords.accuracy
-      });
-      autocomplete.setBounds(circle.getBounds());
-    });
-  }
-}
-
-// Geolocation Function
-function initMap() {
-        var map = new google.maps.Map(document.getElementById('map-new'), {
-          zoom: 8,
-          center: {lat: 3.519863,lng: 101.538116}
-        });
-				setMapOnAll(map);
-				setMapOnAll2(map);
-        var geocoder = new google.maps.Geocoder();
-
-      //  document.getElementById('submit').addEventListener('click', function() {
-				//	deleteMarkers();
-         // geocodeAddress(geocoder, map);
-				//	geocodeAddress2(geocoder, map);
-        //});
-
-				document.getElementById('geocode').addEventListener('click', function(){
-					deleteMarkers();
-          geocodeAddress(geocoder, map);
+			document.getElementById('geocode').addEventListener('click', function(){
+				deleteMarkers();
+        geocodeAddress(geocoder, map);
 				//});
 				//document.getElementById('autocomplete2').addEventListener('change', function(){
-					deleteMarkers2();
-					geocodeAddress2(geocoder, map);
-				});
-      }
+				deleteMarkers2();
+				geocodeAddress2(geocoder, map);
+			});
+  }
 
-      function geocodeAddress(geocoder, resultsMap) {
-				
-        var address = document.getElementById('autocomplete').value;
-				if(address != ""){
-					geocoder.geocode({'address': address}, function(results, status) {
-          	if (status === 'OK') {
-            	resultsMap.setCenter(results[0].geometry.location);
-            	var marker = new google.maps.Marker({
-              	map: resultsMap,
-              	position: results[0].geometry.location,
-								draggable: true,
-								animation: google.maps.Animation.DROP,
-								label: "PA"
-            	});
-							markers.push(marker);
-							document.getElementById('lat_pickup').value = results[0].geometry.location.lat();
-							document.getElementById('lng_pickup').value = results[0].geometry.location.lng();
-							google.maps.event.addListener(marker, 'dragend', function (event) {
-								document.getElementById("lat_pickup").value = event.latLng.lat();
-								document.getElementById("lng_pickup").value = event.latLng.lng();
-							});
-          	} else {
-            	alert('Geocode was not successful for the following reason: ' + status);
-          	}
+  function geocodeAddress(geocoder, resultsMap) {			
+    var address = document.getElementById('autocomplete').value;
+		if(address != ""){
+			geocoder.geocode({'address': address}, function(results, status) {
+      	if (status === 'OK') {
+        	resultsMap.setCenter(results[0].geometry.location);
+        	var marker = new google.maps.Marker({
+          	map: resultsMap,
+          	position: results[0].geometry.location,
+						draggable: true,
+						animation: google.maps.Animation.DROP,
+						label: "PA"
         	});
-				}else if(address == ""){
+					markers.push(marker);
+					document.getElementById('lat_pickup').value = results[0].geometry.location.lat();
+					document.getElementById('lng_pickup').value = results[0].geometry.location.lng();
+					google.maps.event.addListener(marker, 'dragend', function (event) {
+						document.getElementById("lat_pickup").value = event.latLng.lat();
+						document.getElementById("lng_pickup").value = event.latLng.lng();
+					});
+      	} else {
+        	alert('Geocode was not successful for the following reason: ' + status);
+      	}
+      });
+		}else if(address == ""){
 
-				}
+		}
         
-      }
+  }
 
-			function geocodeAddress2(geocoder, resultsMap) {
-				
-        var address = document.getElementById('autocomplete2').value;
-				if(address != ""){
-						geocoder.geocode({'address': address}, function(results, status) {
-          	if (status === 'OK') {
-            	resultsMap.setCenter(results[0].geometry.location);
-            	var marker = new google.maps.Marker({
-              	map: resultsMap,
-              	position: results[0].geometry.location,
-								draggable: true,
-								animation: google.maps.Animation.DROP,
-								label: "DA"
-            	});
-						
-							markers2.push(marker);
-							document.getElementById('lat_dropoff').value = results[0].geometry.location.lat();
-							document.getElementById('lng_dropoff').value = results[0].geometry.location.lng();
-							google.maps.event.addListener(marker, 'dragend', function (event) {
-								document.getElementById("lat_dropoff").value = event.latLng.lat();
-								document.getElementById("lng_dropoff").value = event.latLng.lng();
-							});
-          	} else {
-            alert('Geocode was not successful for the following reason: ' + status);
-          	}
-        	});
-				}else if(address == ""){
+	function geocodeAddress2(geocoder, resultsMap) {			
+    var address = document.getElementById('autocomplete2').value;
+		if(address != ""){
+			geocoder.geocode({'address': address}, function(results, status) {
+        if (status === 'OK') {
+          resultsMap.setCenter(results[0].geometry.location);
+          var marker = new google.maps.Marker({
+            map: resultsMap,
+            position: results[0].geometry.location,
+						draggable: true,
+						animation: google.maps.Animation.DROP,
+						label: "DA"
+          });			
+					markers2.push(marker);
+					document.getElementById('lat_dropoff').value = results[0].geometry.location.lat();
+					document.getElementById('lng_dropoff').value = results[0].geometry.location.lng();
+					google.maps.event.addListener(marker, 'dragend', function (event) {
+						document.getElementById("lat_dropoff").value = event.latLng.lat();
+						document.getElementById("lng_dropoff").value = event.latLng.lng();
+					});
+        } else {
+          alert('Geocode was not successful for the following reason: ' + status);
+        }
+   		});
+		}else if(address == ""){
 
-				}
+		}
         
-      }
-
-			
+  }
 
       // Sets the map on all markers in the array.
       function setMapOnAll(map) {
@@ -563,6 +583,8 @@ function initMap() {
         markers2 = [];
       }
 
+	
+// for increment and decrement button
 var totalWeight = 0;
 var totalBag = 0;
 
@@ -596,6 +618,9 @@ var totalBag = 0;
 		}
 	});
 });
+
+
+
 </script>
 
 
