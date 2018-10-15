@@ -4,121 +4,162 @@
 	ViewData["Title"] = "Edit";
 }
 
-<div class="row">
-	<div class="col-lg-12">
-		<h1 class="page-header">Order</h1>
-	</div>
-	<!-- /.col-lg-12 -->
-</div>
-<div class="row">
-	<div class="col-lg-12">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				Edit Order
-			</div>
-			<div class="panel-body">
-				<div class="row">
-					<div class="col-md-4">
-						<form asp-action="Edit">
-							<div asp-validation-summary="ModelOnly" class="text-danger"></div>
-							<input type="hidden" asp-for="order_id" />
-							<div class="form-group">
-								<label asp-for="cust_id" class="control-label"></label>
-								<input asp-for="cust_id" class="form-control" />
-								<span asp-validation-for="cust_id" class="text-danger"></span>
-							</div>
-							<div class="form-group">
-								<label asp-for="pickup_dri_id" class="control-label"></label>
-								<input asp-for="pickup_dri_id" class="form-control" />
-								<span asp-validation-for="pickup_dri_id" class="text-danger"></span>
-							</div>
-							<div class="form-group">
-								<label asp-for="sp_id" class="control-label"></label>
-								<input asp-for="sp_id" class="form-control" />
-								<span asp-validation-for="sp_id" class="text-danger"></span>
-							</div>
-							<div class="form-group">
-								<label asp-for="status_id" class="control-label"></label>
-								<select asp-for="status_id" asp-items="Html.GetEnumSelectList<StatusType>()" class="form-control"></select>
-
-								<span asp-validation-for="status_id" class="text-danger"></span>
-							</div>
-							<div class="form-group">
-								<label asp-for="order_weight" class="control-label"></label>
-								<input asp-for="order_weight" class="form-control" />
-								<span asp-validation-for="order_weight" class="text-danger"></span>
-							</div>
-							<div class="form-group">
-								<label asp-for="order_pickup_add" class="control-label"></label>
-								<input asp-for="order_pickup_add" class="form-control" />
-								<span asp-validation-for="order_pickup_add" class="text-danger"></span>
-							</div>
-							<div class="form-group">
-								<label asp-for="order_deliver_add" class="control-label"></label>
-								<input asp-for="order_deliver_add" class="form-control" />
-								<span asp-validation-for="order_deliver_add" class="text-danger"></span>
-							</div>
-							<div class="form-group">
-								<label asp-for="deliver_dri_id" class="control-label"></label>
-								<input asp-for="deliver_dri_id" class="form-control" />
-								<span asp-validation-for="deliver_dri_id" class="text-danger"></span>
-							</div>
-							<div class="form-group">
-								<label asp-for="request_time" class="control-label"></label>
-								<input asp-for="request_time" class="form-control" />
-								<span asp-validation-for="request_time" class="text-danger"></span>
-							</div>
-							<div class="form-group">
-								<label asp-for="awaiting_pickup_time" class="control-label"></label>
-								<input asp-for="awaiting_pickup_time" class="form-control" />
-								<span asp-validation-for="awaiting_pickup_time" class="text-danger"></span>
-							</div>
-							<div class="form-group">
-								<label asp-for="pickup_time" class="control-label"></label>
-								<input asp-for="pickup_time" class="form-control" />
-								<span asp-validation-for="pickup_time" class="text-danger"></span>
-							</div>
-							<div class="form-group">
-								<label asp-for="washing_time" class="control-label"></label>
-								<input asp-for="washing_time" class="form-control" />
-								<span asp-validation-for="washing_time" class="text-danger"></span>
-							</div>
-							<div class="form-group">
-								<label asp-for="washing_completed_time" class="control-label"></label>
-								<input asp-for="washing_completed_time" class="form-control" />
-								<span asp-validation-for="washing_completed_time" class="text-danger"></span>
-							</div>
-							<div class="form-group">
-								<label asp-for="delivering_time" class="control-label"></label>
-								<input asp-for="delivering_time" class="form-control" />
-								<span asp-validation-for="delivering_time" class="text-danger"></span>
-							</div>
-							<div class="form-group">
-								<label asp-for="delivered_time" class="control-label"></label>
-								<input asp-for="delivered_time" class="form-control" />
-								<span asp-validation-for="delivered_time" class="text-danger"></span>
-							</div>
-							<div class="form-group">
-								<label asp-for="order_amount" class="control-label"></label>
-								<input asp-for="order_amount" class="form-control" />
-								<span asp-validation-for="order_amount" class="text-danger"></span>
-							</div>
-							<div class="form-group">
-								<label asp-for="payment_method" class="control-label"></label>
-								<input asp-for="payment_method" class="form-control" />
-								<span asp-validation-for="payment_method" class="text-danger"></span>
-							</div>
-							<div class="form-group">
-								<input type="submit" value="Save" class="btn btn-default" />
-							</div>
-						</form>
-					</div>
-				</div>
-
-				<div>
+<!-- start content -->
+        <!-- Header -->
+        <div class="header bg-gradient-warning pb-8 pt-5 pt-md-8">
+            <div class="container-fluid">
+                <div class="header-body">
+                    <form asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="order_id" />
+                        <div class="form-group">
+                            <label asp-for="cust_id" class="control-label"></label>
+                            <input asp-for="cust_id" class="form-control" />
+                            <span asp-validation-for="cust_id" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="pickup_dri_id" class="control-label"></label>
+                            <input asp-for="pickup_dri_id" class="form-control" />
+                            <span asp-validation-for="pickup_dri_id" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="sp_id" class="control-label"></label>
+                            <input asp-for="sp_id" class="form-control" />
+                            <span asp-validation-for="sp_id" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="status_id" class="control-label"></label>
+                            <select asp-for="status_id" asp-items="Html.GetEnumSelectList<StatusType>()" class="form-control"></select>
+                    
+                            <span asp-validation-for="status_id" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="order_weight" class="control-label"></label>
+                            <input asp-for="order_weight" class="form-control" />
+                            <span asp-validation-for="order_weight" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="order_pickup_add" class="control-label"></label>
+                            <input asp-for="order_pickup_add" class="form-control" />
+                            <span asp-validation-for="order_pickup_add" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="order_deliver_add" class="control-label"></label>
+                            <input asp-for="order_deliver_add" class="form-control" />
+                            <span asp-validation-for="order_deliver_add" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="deliver_dri_id" class="control-label"></label>
+                            <input asp-for="deliver_dri_id" class="form-control" />
+                            <span asp-validation-for="deliver_dri_id" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="request_time" class="control-label"></label>
+                            <input asp-for="request_time" class="form-control" />
+                            <span asp-validation-for="request_time" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="awaiting_pickup_time" class="control-label"></label>
+                            <input asp-for="awaiting_pickup_time" class="form-control" />
+                            <span asp-validation-for="awaiting_pickup_time" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="pickup_time" class="control-label"></label>
+                            <input asp-for="pickup_time" class="form-control" />
+                            <span asp-validation-for="pickup_time" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="washing_time" class="control-label"></label>
+                            <input asp-for="washing_time" class="form-control" />
+                            <span asp-validation-for="washing_time" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="washing_completed_time" class="control-label"></label>
+                            <input asp-for="washing_completed_time" class="form-control" />
+                            <span asp-validation-for="washing_completed_time" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="delivering_time" class="control-label"></label>
+                            <input asp-for="delivering_time" class="form-control" />
+                            <span asp-validation-for="delivering_time" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="delivered_time" class="control-label"></label>
+                            <input asp-for="delivered_time" class="form-control" />
+                            <span asp-validation-for="delivered_time" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="order_amount" class="control-label"></label>
+                            <input asp-for="order_amount" class="form-control" />
+                            <span asp-validation-for="order_amount" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="payment_method" class="control-label"></label>
+                            <input asp-for="payment_method" class="form-control" />
+                            <span asp-validation-for="payment_method" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Save" class="btn btn-default" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Page content -->
+        <div class="container-fluid mt--7">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div>
 					<a asp-action="Index">Back to List</a>
-				</div>
-				</div></div></div></div>
-				@section Scripts {
+					</div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-xl-8 mb-5 mb-xl-0">
+                    
+                </div>
+                <div class="col-xl-4">
+                    
+                </div>
+            </div>
+        </div>
+        <!-- end content -->
+
+
+        
+        <br><br><br>
+        <div class="container-fluid mt--7">
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="row align-items-center justify-content-xl-between">
+                <div class="col-xl-6">
+                    <div class="copyright text-center text-xl-left text-muted">
+                        &copy; 2018 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Creative
+                            Tim</a>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <ul class="nav nav-footer justify-content-center justify-content-xl-end">
+                        <li class="nav-item">
+                            <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About
+                                Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="http://blog.creative-tim.com" class="nav-link" target="_blank">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md"
+                                class="nav-link" target="_blank">MIT License</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        </div>
+        <!-- end page content -->
+		@section Scripts {
 					@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 				}

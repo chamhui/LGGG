@@ -13267,35 +13267,34 @@
     ".NETCoreApp,Version=v2.0": [
       "Microsoft.AspNet.Identity.Core >= 2.2.2",
       "Microsoft.AspNetCore.All >= 2.0.8",
+      "Microsoft.EntityFrameworkCore.Sqlite >= 2.0.3",
       "Microsoft.NETCore.App >= 2.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Syahrin Seth\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/muhammadnorsyahrinseth/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Syahrin Seth\\LGGG\\LaundaryGODriver\\LaundryGoDriver.csproj",
+      "projectUniqueName": "/Users/muhammadnorsyahrinseth/Documents/Syahrin Seth Work/Coding Work/Go Laundry/LGGG/LaundaryGODriver/LaundryGoDriver.csproj",
       "projectName": "LaundryGoDriver",
-      "projectPath": "C:\\Users\\Syahrin Seth\\LGGG\\LaundaryGODriver\\LaundryGoDriver.csproj",
-      "packagesPath": "C:\\Users\\Syahrin Seth\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Syahrin Seth\\LGGG\\LaundaryGODriver\\obj\\",
+      "projectPath": "/Users/muhammadnorsyahrinseth/Documents/Syahrin Seth Work/Coding Work/Go Laundry/LGGG/LaundaryGODriver/LaundryGoDriver.csproj",
+      "packagesPath": "/Users/muhammadnorsyahrinseth/.nuget/packages/",
+      "outputPath": "/Users/muhammadnorsyahrinseth/Documents/Syahrin Seth Work/Coding Work/Go Laundry/LGGG/LaundaryGODriver/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Syahrin Seth\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/muhammadnorsyahrinseth/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -13319,6 +13318,10 @@
           "Microsoft.AspNetCore.All": {
             "target": "Package",
             "version": "[2.0.8, )"
+          },
+          "Microsoft.EntityFrameworkCore.Sqlite": {
+            "target": "Package",
+            "version": "[2.0.3, )"
           },
           "Microsoft.NETCore.App": {
             "target": "Package",

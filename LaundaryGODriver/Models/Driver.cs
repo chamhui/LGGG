@@ -7,7 +7,7 @@ namespace LaundryGoDriver.Models
 {
 	public class Driver
 	{
-[Key]
+		[Key]
 		[Display(Name = "ID")]
 		public long dri_id { get; set; }
 		[Display(Name = "Name")]

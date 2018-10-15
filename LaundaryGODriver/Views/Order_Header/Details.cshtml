@@ -3,134 +3,142 @@
 @{
 	ViewData["Title"] = "Details";
 }
-
-<div class="row">
-	<div class="col-lg-12">
-		<h1 class="page-header">Order</h1>
-	</div>
-	<!-- /.col-lg-12 -->
-</div>
-<div class="row">
-	<div class="col-lg-12">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				Details
-			</div>
-			<div class="panel-body">
-
-				<div class="row">
-					<h2>Details</h2>
-
-					<div>
-						<h4>Service_Provider</h4>
-						<hr />
-						<dl class="dl-horizontal">
-							<dt>
-								@Html.DisplayNameFor(model => model.cust_id)
-							</dt>
-							<dd>
-								@Html.DisplayFor(model => model.cust_id)
-							</dd>
-							<dt>
-								@Html.DisplayNameFor(model => model.pickup_dri_id)
-							</dt>
-							<dd>
-								@Html.DisplayFor(model => model.pickup_dri_id)
-							</dd>
-							<dt>
-								@Html.DisplayNameFor(model => model.sp_id)
-							</dt>
-							<dd>
-								@Html.DisplayFor(model => model.sp_id)
-							</dd>
-							<dt>
-								@Html.DisplayNameFor(model => model.status_id)
-							</dt>
-							<dd>
-								@Html.DisplayFor(model => model.status_id)
-							</dd>
-							<dt>
-								@Html.DisplayNameFor(model => model.order_weight)
-							</dt>
-							<dd>
-								@Html.DisplayFor(model => model.order_weight)
-							</dd>
-							<dt>
-								@Html.DisplayNameFor(model => model.order_pickup_add)
-							</dt>
-							<dd>
-								@Html.DisplayFor(model => model.order_pickup_add)
-							</dd>
-							<dt>
-								@Html.DisplayNameFor(model => model.order_deliver_add)
-							</dt>
-							<dd>
-								@Html.DisplayFor(model => model.order_deliver_add)
-							</dd>
-							<dt>
-								@Html.DisplayNameFor(model => model.deliver_dri_id)
-							</dt>
-							<dd>
-								@Html.DisplayFor(model => model.deliver_dri_id)
-							</dd>
-							<dt>
-								@Html.DisplayNameFor(model => model.request_time)
-							</dt>
-							<dd>
-								@Html.DisplayFor(model => model.request_time)
-							</dd>
-							<dt>
-								@Html.DisplayNameFor(model => model.awaiting_pickup_time)
-							</dt>
-							<dd>
-								@Html.DisplayFor(model => model.awaiting_pickup_time)
-							</dd>
-							<dt>
-								@Html.DisplayNameFor(model => model.pickup_time)
-							</dt>
-							<dd>
-								@Html.DisplayFor(model => model.pickup_time)
-							</dd>
-							<dt>
-								@Html.DisplayNameFor(model => model.washing_time)
-							</dt>
-							<dd>
-								@Html.DisplayFor(model => model.washing_time)
-							</dd>
-							<dt>
-								@Html.DisplayNameFor(model => model.washing_completed_time)
-							</dt>
-							<dd>
-								@Html.DisplayFor(model => model.washing_completed_time)
-							</dd>
-							<dt>
-								@Html.DisplayNameFor(model => model.delivering_time)
-							</dt>
-							<dd>
-								@Html.DisplayFor(model => model.delivering_time)
-							</dd>
-							<dt>
-								@Html.DisplayNameFor(model => model.delivered_time)
-							</dt>
-							<dd>
-								@Html.DisplayFor(model => model.delivered_time)
-							</dd>
-							<dt>
-								@Html.DisplayNameFor(model => model.order_amount)
-							</dt>
-							<dd>
-								@Html.DisplayFor(model => model.order_amount)
-							</dd>
-							<dt>
-								@Html.DisplayNameFor(model => model.payment_method)
-							</dt>
-							<dd>
-								@Html.DisplayFor(model => model.payment_method)
-							</dd>
-						</dl>
-					</div>
-					<div>
-						<a asp-action="Edit" asp-route-id="@Model.order_id">Edit</a> |
-						<a asp-action="Index">Back to List</a>
-					</div>
-					</div></div></div></div></div>
+<!-- start content -->
+        <!-- Header -->
+        <div class="header bg-gradient-warning pb-8 pt-5 pt-md-8">
+            <div class="container-fluid">
+                <div class="header-body">
+                
+                </div>
+            </div>
+        </div>
+        <!-- Page content -->
+        <div class="container-fluid mt--7">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="row">
+                        <div>
+                            <h4>Service_Provider</h4>
+                            <hr />
+                            <dl class="dl-horizontal">
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.cust_id)
+                                </dt>
+                                <dd>
+                                    @Html.DisplayFor(model => model.cust_id)
+                                </dd>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.pickup_dri_id)
+                                </dt>
+                                <dd>
+                                    @Html.DisplayFor(model => model.pickup_dri_id)
+                                </dd>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.sp_id)
+                                </dt>
+                                <dd>
+                                    @Html.DisplayFor(model => model.sp_id)
+                                </dd>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.status_id)
+                                </dt>
+                                <dd>
+                                    @Html.DisplayFor(model => model.status_id)
+                                </dd>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.order_weight)
+                                </dt>
+                                <dd>
+                                    @Html.DisplayFor(model => model.order_weight)
+                                </dd>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.order_pickup_add)
+                                </dt>
+                                <dd>
+                                    @Html.DisplayFor(model => model.order_pickup_add)
+                                </dd>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.order_deliver_add)
+                                </dt>
+                                <dd>
+                                    @Html.DisplayFor(model => model.order_deliver_add)
+                                </dd>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.deliver_dri_id)
+                                </dt>
+                                <dd>
+                                    @Html.DisplayFor(model => model.deliver_dri_id)
+                                </dd>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.request_time)
+                                </dt>
+                                <dd>
+                                    @Html.DisplayFor(model => model.request_time)
+                                </dd>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.awaiting_pickup_time)
+                                </dt>
+                                <dd>
+                                    @Html.DisplayFor(model => model.awaiting_pickup_time)
+                                </dd>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.pickup_time)
+                                </dt>
+                                <dd>
+                                    @Html.DisplayFor(model => model.pickup_time)
+                                </dd>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.washing_time)
+                                </dt>
+                                <dd>
+                                    @Html.DisplayFor(model => model.washing_time)
+                                </dd>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.washing_completed_time)
+                                </dt>
+                                <dd>
+                                    @Html.DisplayFor(model => model.washing_completed_time)
+                                </dd>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.delivering_time)
+                                </dt>
+                                <dd>
+                                    @Html.DisplayFor(model => model.delivering_time)
+                                </dd>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.delivered_time)
+                                </dt>
+                                <dd>
+                                    @Html.DisplayFor(model => model.delivered_time)
+                                </dd>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.order_amount)
+                                </dt>
+                                <dd>
+                                    @Html.DisplayFor(model => model.order_amount)
+                                </dd>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.payment_method)
+                                </dt>
+                                <dd>
+                                    @Html.DisplayFor(model => model.payment_method)
+                                </dd>
+                            </dl>
+                            <div>
+                                <a asp-action="Edit" asp-route-id="@Model.order_id">Edit</a> |
+                                <a asp-action="Index">Back to List</a>
+                            </div>
+                        </div>
+                        
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-xl-8 mb-5 mb-xl-0">
+                    
+                </div>
+                <div class="col-xl-4">
+                    
+                </div>
+            </div>
+        </div>
+        <!-- end content -->
